@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+title: "Computational Forensic Analysis of the Beale Ciphers"
+message: "If you use or reference this work, please cite it as below."
+type: article
+authors:
+  - family-names: Daugherty
+    given-names: Bryan
+  - family-names: Ward
+    given-names: Gregory
+  - family-names: Ryan
+    given-names: Shawn
+  - family-names: Martin
+    given-names: J. Alexander
+date-released: "2026-03-24"
+url: "https://github.com/OriginNeuralAI/The_Beales_Cipher-DECODED"
+repository-code: "https://github.com/OriginNeuralAI/The_Beales_Cipher-DECODED"
+license: CC-BY-NC-ND-4.0
+keywords:
+  - beale-cipher
+  - cryptanalysis
+  - forensic-analysis
+  - book-cipher
+  - declaration-of-independence
+  - cryptography
+  - historical-cryptography
+  - fabrication-detection
+abstract: >-
+  Computational forensic analysis of the three Beale ciphers (B1, B2, B3)
+  spanning 8 phases and 35+ statistical diagnostics. B2 is genuine
+  (96.6% decode accuracy via Declaration of Independence book cipher,
+  fabrication score 0.00). B1 and B3 are fabrications by James B. Ward
+  (scores 4.01/7.51, chi-squared impossibility proofs, cognitive identity
+  profiling). The Gillogly alphabetical sequence was deliberately planted
+  (P < 10^-5). All 22 B2 mismatches resolve into 4 systematic groups.
+  Ward's construction timeline is reconstructed (~45 minutes total).

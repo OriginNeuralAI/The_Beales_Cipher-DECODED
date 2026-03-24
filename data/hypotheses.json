@@ -1,0 +1,76 @@
+{
+  "hypotheses": [
+    {
+      "id": "H1",
+      "title": "B2 Is a Genuine Book Cipher",
+      "confidence": 0.99,
+      "status": "VERIFIED",
+      "key_evidence": "Fabrication score 0.00, decode accuracy 96.6%, serial correlation 0.044"
+    },
+    {
+      "id": "H2",
+      "title": "B1 and B3 Are Sequential-Gibberish Fabrications",
+      "confidence": 0.99,
+      "status": "VERIFIED",
+      "key_evidence": "Chi-squared B1=50.9, B3=57.8 (threshold 44.3), IC below English"
+    },
+    {
+      "id": "H3",
+      "title": "Same Fabricator Created B1 and B3",
+      "confidence": 0.9,
+      "status": "CONFIRMED",
+      "key_evidence": "12D bootstrap cognitive feature test, shared scanning bias"
+    },
+    {
+      "id": "H4",
+      "title": "B3 Was Fabricated Before B1",
+      "confidence": 0.8,
+      "status": "CONFIRMED",
+      "key_evidence": "B3 serial correlation 0.612 > B1 0.252, Gillogly only in B1"
+    },
+    {
+      "id": "H5",
+      "title": "The Gillogly Sequence Was Deliberately Planted",
+      "confidence": 0.98,
+      "status": "VERIFIED",
+      "key_evidence": "Monte Carlo P < 10^-5, non-monotone numbers produce monotone letters"
+    },
+    {
+      "id": "H6",
+      "title": "Beale Used a Dunlap-Tradition DoI Edition",
+      "confidence": 0.9,
+      "status": "CONFIRMED",
+      "key_evidence": "unalienable spelling, Y-word at 811, X-word at 1005"
+    },
+    {
+      "id": "H7",
+      "title": "Ward Published Plaintext Contains 37 Expanded Abbreviations",
+      "confidence": 0.95,
+      "status": "VERIFIED",
+      "key_evidence": "NW alignment identifies exactly 37 extra characters"
+    },
+    {
+      "id": "H8",
+      "title": "22 B2 Mismatches Arise from 4 Systematic Sources",
+      "confidence": 0.92,
+      "status": "VERIFIED",
+      "key_evidence": "3 Dunlap spelling + 2 off-by-1 + 8-9 Y-word + 4 X-word"
+    },
+    {
+      "id": "H9",
+      "title": "Ward Fabrication Time Was ~45 Minutes Total",
+      "confidence": 0.8,
+      "status": "CONFIRMED",
+      "key_evidence": "Two-rate model: B1=22min, B3=17min, Gillogly=6min"
+    },
+    {
+      "id": "H10",
+      "title": "B3 Q1 Does Not Contain Real Content",
+      "confidence": 0.92,
+      "status": "CONFIRMED",
+      "key_evidence": "IC inconclusive, no recognizable patterns, Bayesian model rejects English"
+    }
+  ],
+  "total": 10,
+  "all_verified_or_confirmed": true
+}

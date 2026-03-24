@@ -1,0 +1,47 @@
+{
+  "description": "Fabrication scores with bootstrap 95% confidence intervals",
+  "ciphers": {
+    "B1": {
+      "score": 4.01,
+      "ci_low": 2.5,
+      "ci_high": 5.5,
+      "classification": "fabricated",
+      "serial_correlation": 0.252,
+      "distinct_ratio": 0.573,
+      "fatigue_gradient": 0.128,
+      "chi_sq_english": 50.86,
+      "selection_model": "DoI-uniform"
+    },
+    "B2": {
+      "score": 0.0,
+      "ci_low": -0.8,
+      "ci_high": 0.8,
+      "classification": "genuine",
+      "serial_correlation": 0.044,
+      "distinct_ratio": 0.236,
+      "fatigue_gradient": 0.047,
+      "chi_sq_english": 9.63,
+      "selection_model": "letter-targeted"
+    },
+    "B3": {
+      "score": 7.51,
+      "ci_low": 5.5,
+      "ci_high": 9.5,
+      "classification": "fabricated",
+      "serial_correlation": 0.612,
+      "distinct_ratio": 0.426,
+      "fatigue_gradient": 0.167,
+      "chi_sq_english": 57.81,
+      "selection_model": "DoI-uniform"
+    }
+  },
+  "classifier": {
+    "auc": 0.97,
+    "roc_auc": 0.9999,
+    "bayes_factor": 235.8,
+    "interpretation": "decisive (BF > 100)"
+  },
+  "chi_squared_threshold": 44.3,
+  "degrees_of_freedom": 25,
+  "significance_level": 0.01
+}

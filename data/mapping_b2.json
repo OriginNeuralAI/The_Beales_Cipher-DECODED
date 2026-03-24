@@ -1,0 +1,5350 @@
+{
+  "description": "B2 cipher number to DoI word mapping (763 positions)",
+  "total_positions": 763,
+  "matches": 215,
+  "mismatches": 548,
+  "accuracy": 0.2818,
+  "mapping": [
+    {
+      "position": 1,
+      "cipher_number": 115,
+      "doi_word": "instituted",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 2,
+      "cipher_number": 73,
+      "doi_word": "hold",
+      "first_letter": "H",
+      "match": true
+    },
+    {
+      "position": 3,
+      "cipher_number": 24,
+      "doi_word": "another",
+      "first_letter": "A",
+      "match": true
+    },
+    {
+      "position": 4,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 5,
+      "cipher_number": 37,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 6,
+      "cipher_number": 52,
+      "doi_word": "decent",
+      "first_letter": "D",
+      "match": true
+    },
+    {
+      "position": 7,
+      "cipher_number": 49,
+      "doi_word": "entitle",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 8,
+      "cipher_number": 17,
+      "doi_word": "political",
+      "first_letter": "P",
+      "match": true
+    },
+    {
+      "position": 9,
+      "cipher_number": 31,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 10,
+      "cipher_number": 62,
+      "doi_word": "should",
+      "first_letter": "S",
+      "match": true
+    },
+    {
+      "position": 11,
+      "cipher_number": 647,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 12,
+      "cipher_number": 22,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 13,
+      "cipher_number": 7,
+      "doi_word": "events",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 14,
+      "cipher_number": 15,
+      "doi_word": "dissolve",
+      "first_letter": "D",
+      "match": true
+    },
+    {
+      "position": 15,
+      "cipher_number": 140,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 16,
+      "cipher_number": 47,
+      "doi_word": "Nature's",
+      "first_letter": "N",
+      "match": true
+    },
+    {
+      "position": 17,
+      "cipher_number": 29,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 18,
+      "cipher_number": 107,
+      "doi_word": "Happiness",
+      "first_letter": "H",
+      "match": true
+    },
+    {
+      "position": 19,
+      "cipher_number": 79,
+      "doi_word": "evident",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 20,
+      "cipher_number": 84,
+      "doi_word": "created",
+      "first_letter": "C",
+      "match": true
+    },
+    {
+      "position": 21,
+      "cipher_number": 56,
+      "doi_word": "opinions",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 22,
+      "cipher_number": 239,
+      "doi_word": "usurpations",
+      "first_letter": "U",
+      "match": true
+    },
+    {
+      "position": 23,
+      "cipher_number": 10,
+      "doi_word": "necessary",
+      "first_letter": "N",
+      "match": true
+    },
+    {
+      "position": 24,
+      "cipher_number": 26,
+      "doi_word": "to",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 25,
+      "cipher_number": 811,
+      "doi_word": "Colonies",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 26,
+      "cipher_number": 5,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 27,
+      "cipher_number": 196,
+      "doi_word": "for",
+      "first_letter": "F",
+      "match": true
+    },
+    {
+      "position": 28,
+      "cipher_number": 308,
+      "doi_word": "Great",
+      "first_letter": "G",
+      "match": false
+    },
+    {
+      "position": 29,
+      "cipher_number": 85,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 30,
+      "cipher_number": 52,
+      "doi_word": "decent",
+      "first_letter": "D",
+      "match": true
+    },
+    {
+      "position": 31,
+      "cipher_number": 160,
+      "doi_word": "foundation",
+      "first_letter": "F",
+      "match": true
+    },
+    {
+      "position": 32,
+      "cipher_number": 136,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 33,
+      "cipher_number": 59,
+      "doi_word": "requires",
+      "first_letter": "R",
+      "match": true
+    },
+    {
+      "position": 34,
+      "cipher_number": 211,
+      "doi_word": "disposed",
+      "first_letter": "D",
+      "match": true
+    },
+    {
+      "position": 35,
+      "cipher_number": 36,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": true
+    },
+    {
+      "position": 36,
+      "cipher_number": 9,
+      "doi_word": "becomes",
+      "first_letter": "B",
+      "match": true
+    },
+    {
+      "position": 37,
+      "cipher_number": 46,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 38,
+      "cipher_number": 316,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 39,
+      "cipher_number": 554,
+      "doi_word": "refusing",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 40,
+      "cipher_number": 122,
+      "doi_word": "from",
+      "first_letter": "F",
+      "match": true
+    },
+    {
+      "position": 41,
+      "cipher_number": 106,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 42,
+      "cipher_number": 95,
+      "doi_word": "inalienable",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 43,
+      "cipher_number": 53,
+      "doi_word": "respect",
+      "first_letter": "R",
+      "match": true
+    },
+    {
+      "position": 44,
+      "cipher_number": 58,
+      "doi_word": "mankind",
+      "first_letter": "M",
+      "match": true
+    },
+    {
+      "position": 45,
+      "cipher_number": 2,
+      "doi_word": "in",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 46,
+      "cipher_number": 42,
+      "doi_word": "Laws",
+      "first_letter": "L",
+      "match": true
+    },
+    {
+      "position": 47,
+      "cipher_number": 7,
+      "doi_word": "events",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 48,
+      "cipher_number": 35,
+      "doi_word": "separate",
+      "first_letter": "S",
+      "match": true
+    },
+    {
+      "position": 49,
+      "cipher_number": 122,
+      "doi_word": "from",
+      "first_letter": "F",
+      "match": true
+    },
+    {
+      "position": 50,
+      "cipher_number": 53,
+      "doi_word": "respect",
+      "first_letter": "R",
+      "match": true
+    },
+    {
+      "position": 51,
+      "cipher_number": 31,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 52,
+      "cipher_number": 82,
+      "doi_word": "men",
+      "first_letter": "M",
+      "match": true
+    },
+    {
+      "position": 53,
+      "cipher_number": 77,
+      "doi_word": "be",
+      "first_letter": "B",
+      "match": true
+    },
+    {
+      "position": 54,
+      "cipher_number": 250,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 55,
+      "cipher_number": 196,
+      "doi_word": "for",
+      "first_letter": "F",
+      "match": true
+    },
+    {
+      "position": 56,
+      "cipher_number": 56,
+      "doi_word": "opinions",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 57,
+      "cipher_number": 96,
+      "doi_word": "Rights",
+      "first_letter": "R",
+      "match": true
+    },
+    {
+      "position": 58,
+      "cipher_number": 118,
+      "doi_word": "deriving",
+      "first_letter": "D",
+      "match": true
+    },
+    {
+      "position": 59,
+      "cipher_number": 71,
+      "doi_word": "separation",
+      "first_letter": "S",
+      "match": true
+    },
+    {
+      "position": 60,
+      "cipher_number": 140,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 61,
+      "cipher_number": 287,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 62,
+      "cipher_number": 28,
+      "doi_word": "among",
+      "first_letter": "A",
+      "match": true
+    },
+    {
+      "position": 63,
+      "cipher_number": 353,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 64,
+      "cipher_number": 37,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 65,
+      "cipher_number": 1005,
+      "doi_word": "We",
+      "first_letter": "W",
+      "match": false
+    },
+    {
+      "position": 66,
+      "cipher_number": 65,
+      "doi_word": "causes",
+      "first_letter": "C",
+      "match": true
+    },
+    {
+      "position": 67,
+      "cipher_number": 147,
+      "doi_word": "alter",
+      "first_letter": "A",
+      "match": true
+    },
+    {
+      "position": 68,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 69,
+      "cipher_number": 24,
+      "doi_word": "another",
+      "first_letter": "A",
+      "match": true
+    },
+    {
+      "position": 70,
+      "cipher_number": 3,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 71,
+      "cipher_number": 8,
+      "doi_word": "it",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 72,
+      "cipher_number": 12,
+      "doi_word": "one",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 73,
+      "cipher_number": 47,
+      "doi_word": "Nature's",
+      "first_letter": "N",
+      "match": true
+    },
+    {
+      "position": 74,
+      "cipher_number": 43,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 75,
+      "cipher_number": 59,
+      "doi_word": "requires",
+      "first_letter": "R",
+      "match": true
+    },
+    {
+      "position": 76,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 77,
+      "cipher_number": 45,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": true
+    },
+    {
+      "position": 78,
+      "cipher_number": 316,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 79,
+      "cipher_number": 101,
+      "doi_word": "Life",
+      "first_letter": "L",
+      "match": true
+    },
+    {
+      "position": 80,
+      "cipher_number": 41,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 81,
+      "cipher_number": 78,
+      "doi_word": "self",
+      "first_letter": "S",
+      "match": true
+    },
+    {
+      "position": 82,
+      "cipher_number": 154,
+      "doi_word": "institute",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 83,
+      "cipher_number": 1005,
+      "doi_word": "We",
+      "first_letter": "W",
+      "match": false
+    },
+    {
+      "position": 84,
+      "cipher_number": 122,
+      "doi_word": "from",
+      "first_letter": "F",
+      "match": true
+    },
+    {
+      "position": 85,
+      "cipher_number": 138,
+      "doi_word": "ends",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 86,
+      "cipher_number": 191,
+      "doi_word": "established",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 87,
+      "cipher_number": 16,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 88,
+      "cipher_number": 77,
+      "doi_word": "be",
+      "first_letter": "B",
+      "match": true
+    },
+    {
+      "position": 89,
+      "cipher_number": 49,
+      "doi_word": "entitle",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 90,
+      "cipher_number": 102,
+      "doi_word": "Liberty",
+      "first_letter": "L",
+      "match": true
+    },
+    {
+      "position": 91,
+      "cipher_number": 57,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 92,
+      "cipher_number": 72,
+      "doi_word": "We",
+      "first_letter": "W",
+      "match": true
+    },
+    {
+      "position": 93,
+      "cipher_number": 34,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 94,
+      "cipher_number": 73,
+      "doi_word": "hold",
+      "first_letter": "H",
+      "match": true
+    },
+    {
+      "position": 95,
+      "cipher_number": 85,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 96,
+      "cipher_number": 35,
+      "doi_word": "separate",
+      "first_letter": "S",
+      "match": true
+    },
+    {
+      "position": 97,
+      "cipher_number": 371,
+      "doi_word": "importance",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 98,
+      "cipher_number": 59,
+      "doi_word": "requires",
+      "first_letter": "R",
+      "match": true
+    },
+    {
+      "position": 99,
+      "cipher_number": 196,
+      "doi_word": "for",
+      "first_letter": "F",
+      "match": true
+    },
+    {
+      "position": 100,
+      "cipher_number": 81,
+      "doi_word": "all",
+      "first_letter": "A",
+      "match": true
+    },
+    {
+      "position": 101,
+      "cipher_number": 92,
+      "doi_word": "Creator",
+      "first_letter": "C",
+      "match": true
+    },
+    {
+      "position": 102,
+      "cipher_number": 191,
+      "doi_word": "established",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 103,
+      "cipher_number": 106,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 104,
+      "cipher_number": 273,
+      "doi_word": "their",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 105,
+      "cipher_number": 60,
+      "doi_word": "that",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 106,
+      "cipher_number": 394,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 107,
+      "cipher_number": 620,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 108,
+      "cipher_number": 270,
+      "doi_word": "new",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 109,
+      "cipher_number": 220,
+      "doi_word": "right",
+      "first_letter": "R",
+      "match": true
+    },
+    {
+      "position": 110,
+      "cipher_number": 106,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 111,
+      "cipher_number": 388,
+      "doi_word": "has",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 112,
+      "cipher_number": 287,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 113,
+      "cipher_number": 63,
+      "doi_word": "declare",
+      "first_letter": "D",
+      "match": true
+    },
+    {
+      "position": 114,
+      "cipher_number": 3,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 115,
+      "cipher_number": 6,
+      "doi_word": "human",
+      "first_letter": "H",
+      "match": true
+    },
+    {
+      "position": 116,
+      "cipher_number": 191,
+      "doi_word": "established",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 117,
+      "cipher_number": 122,
+      "doi_word": "from",
+      "first_letter": "F",
+      "match": true
+    },
+    {
+      "position": 118,
+      "cipher_number": 43,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 119,
+      "cipher_number": 234,
+      "doi_word": "long",
+      "first_letter": "L",
+      "match": true
+    },
+    {
+      "position": 120,
+      "cipher_number": 400,
+      "doi_word": "other",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 121,
+      "cipher_number": 106,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 122,
+      "cipher_number": 290,
+      "doi_word": "necessity",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 123,
+      "cipher_number": 314,
+      "doi_word": "repeated",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 124,
+      "cipher_number": 47,
+      "doi_word": "Nature's",
+      "first_letter": "N",
+      "match": true
+    },
+    {
+      "position": 125,
+      "cipher_number": 48,
+      "doi_word": "God",
+      "first_letter": "G",
+      "match": true
+    },
+    {
+      "position": 126,
+      "cipher_number": 81,
+      "doi_word": "all",
+      "first_letter": "A",
+      "match": true
+    },
+    {
+      "position": 127,
+      "cipher_number": 96,
+      "doi_word": "Rights",
+      "first_letter": "R",
+      "match": true
+    },
+    {
+      "position": 128,
+      "cipher_number": 26,
+      "doi_word": "to",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 129,
+      "cipher_number": 115,
+      "doi_word": "instituted",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 130,
+      "cipher_number": 92,
+      "doi_word": "Creator",
+      "first_letter": "C",
+      "match": true
+    },
+    {
+      "position": 131,
+      "cipher_number": 158,
+      "doi_word": "laying",
+      "first_letter": "L",
+      "match": true
+    },
+    {
+      "position": 132,
+      "cipher_number": 191,
+      "doi_word": "established",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 133,
+      "cipher_number": 110,
+      "doi_word": "secure",
+      "first_letter": "S",
+      "match": true
+    },
+    {
+      "position": 134,
+      "cipher_number": 77,
+      "doi_word": "be",
+      "first_letter": "B",
+      "match": true
+    },
+    {
+      "position": 135,
+      "cipher_number": 85,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 136,
+      "cipher_number": 197,
+      "doi_word": "light",
+      "first_letter": "L",
+      "match": true
+    },
+    {
+      "position": 137,
+      "cipher_number": 46,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 138,
+      "cipher_number": 10,
+      "doi_word": "necessary",
+      "first_letter": "N",
+      "match": true
+    },
+    {
+      "position": 139,
+      "cipher_number": 113,
+      "doi_word": "Governments",
+      "first_letter": "G",
+      "match": true
+    },
+    {
+      "position": 140,
+      "cipher_number": 140,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 141,
+      "cipher_number": 353,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 142,
+      "cipher_number": 48,
+      "doi_word": "God",
+      "first_letter": "G",
+      "match": true
+    },
+    {
+      "position": 143,
+      "cipher_number": 120,
+      "doi_word": "just",
+      "first_letter": "J",
+      "match": true
+    },
+    {
+      "position": 144,
+      "cipher_number": 106,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 145,
+      "cipher_number": 2,
+      "doi_word": "in",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 146,
+      "cipher_number": 607,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 147,
+      "cipher_number": 61,
+      "doi_word": "they",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 148,
+      "cipher_number": 420,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 149,
+      "cipher_number": 811,
+      "doi_word": "Colonies",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 150,
+      "cipher_number": 29,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 151,
+      "cipher_number": 125,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 152,
+      "cipher_number": 14,
+      "doi_word": "to",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 153,
+      "cipher_number": 20,
+      "doi_word": "have",
+      "first_letter": "H",
+      "match": true
+    },
+    {
+      "position": 154,
+      "cipher_number": 37,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 155,
+      "cipher_number": 105,
+      "doi_word": "pursuit",
+      "first_letter": "P",
+      "match": true
+    },
+    {
+      "position": 156,
+      "cipher_number": 28,
+      "doi_word": "among",
+      "first_letter": "A",
+      "match": true
+    },
+    {
+      "position": 157,
+      "cipher_number": 248,
+      "doi_word": "to",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 158,
+      "cipher_number": 16,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 159,
+      "cipher_number": 159,
+      "doi_word": "its",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 160,
+      "cipher_number": 7,
+      "doi_word": "events",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 161,
+      "cipher_number": 35,
+      "doi_word": "separate",
+      "first_letter": "S",
+      "match": true
+    },
+    {
+      "position": 162,
+      "cipher_number": 19,
+      "doi_word": "which",
+      "first_letter": "W",
+      "match": true
+    },
+    {
+      "position": 163,
+      "cipher_number": 301,
+      "doi_word": "The",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 164,
+      "cipher_number": 125,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 165,
+      "cipher_number": 110,
+      "doi_word": "secure",
+      "first_letter": "S",
+      "match": true
+    },
+    {
+      "position": 166,
+      "cipher_number": 486,
+      "doi_word": "a",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 167,
+      "cipher_number": 287,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 168,
+      "cipher_number": 98,
+      "doi_word": "among",
+      "first_letter": "A",
+      "match": true
+    },
+    {
+      "position": 169,
+      "cipher_number": 117,
+      "doi_word": "Men",
+      "first_letter": "M",
+      "match": true
+    },
+    {
+      "position": 170,
+      "cipher_number": 511,
+      "doi_word": "large",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 171,
+      "cipher_number": 62,
+      "doi_word": "should",
+      "first_letter": "S",
+      "match": true
+    },
+    {
+      "position": 172,
+      "cipher_number": 51,
+      "doi_word": "a",
+      "first_letter": "A",
+      "match": true
+    },
+    {
+      "position": 173,
+      "cipher_number": 220,
+      "doi_word": "right",
+      "first_letter": "R",
+      "match": true
+    },
+    {
+      "position": 174,
+      "cipher_number": 37,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 175,
+      "cipher_number": 113,
+      "doi_word": "Governments",
+      "first_letter": "G",
+      "match": true
+    },
+    {
+      "position": 176,
+      "cipher_number": 140,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 177,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 178,
+      "cipher_number": 138,
+      "doi_word": "ends",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 179,
+      "cipher_number": 540,
+      "doi_word": "population",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 180,
+      "cipher_number": 8,
+      "doi_word": "it",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 181,
+      "cipher_number": 44,
+      "doi_word": "Nature",
+      "first_letter": "N",
+      "match": true
+    },
+    {
+      "position": 182,
+      "cipher_number": 287,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 183,
+      "cipher_number": 388,
+      "doi_word": "has",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 184,
+      "cipher_number": 117,
+      "doi_word": "Men",
+      "first_letter": "M",
+      "match": true
+    },
+    {
+      "position": 185,
+      "cipher_number": 18,
+      "doi_word": "bands",
+      "first_letter": "B",
+      "match": true
+    },
+    {
+      "position": 186,
+      "cipher_number": 79,
+      "doi_word": "evident",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 187,
+      "cipher_number": 344,
+      "doi_word": "has",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 188,
+      "cipher_number": 34,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 189,
+      "cipher_number": 20,
+      "doi_word": "have",
+      "first_letter": "H",
+      "match": true
+    },
+    {
+      "position": 190,
+      "cipher_number": 59,
+      "doi_word": "requires",
+      "first_letter": "R",
+      "match": true
+    },
+    {
+      "position": 191,
+      "cipher_number": 511,
+      "doi_word": "large",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 192,
+      "cipher_number": 548,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 193,
+      "cipher_number": 107,
+      "doi_word": "Happiness",
+      "first_letter": "H",
+      "match": true
+    },
+    {
+      "position": 194,
+      "cipher_number": 603,
+      "doi_word": "offices",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 195,
+      "cipher_number": 220,
+      "doi_word": "right",
+      "first_letter": "R",
+      "match": true
+    },
+    {
+      "position": 196,
+      "cipher_number": 7,
+      "doi_word": "events",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 197,
+      "cipher_number": 66,
+      "doi_word": "which",
+      "first_letter": "W",
+      "match": true
+    },
+    {
+      "position": 198,
+      "cipher_number": 154,
+      "doi_word": "institute",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 199,
+      "cipher_number": 41,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 200,
+      "cipher_number": 20,
+      "doi_word": "have",
+      "first_letter": "H",
+      "match": true
+    },
+    {
+      "position": 201,
+      "cipher_number": 50,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 202,
+      "cipher_number": 6,
+      "doi_word": "human",
+      "first_letter": "H",
+      "match": true
+    },
+    {
+      "position": 203,
+      "cipher_number": 575,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 204,
+      "cipher_number": 122,
+      "doi_word": "from",
+      "first_letter": "F",
+      "match": true
+    },
+    {
+      "position": 205,
+      "cipher_number": 154,
+      "doi_word": "institute",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 206,
+      "cipher_number": 248,
+      "doi_word": "to",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 207,
+      "cipher_number": 110,
+      "doi_word": "secure",
+      "first_letter": "S",
+      "match": true
+    },
+    {
+      "position": 208,
+      "cipher_number": 61,
+      "doi_word": "they",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 209,
+      "cipher_number": 52,
+      "doi_word": "decent",
+      "first_letter": "D",
+      "match": true
+    },
+    {
+      "position": 210,
+      "cipher_number": 33,
+      "doi_word": "earth",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 211,
+      "cipher_number": 30,
+      "doi_word": "Powers",
+      "first_letter": "P",
+      "match": true
+    },
+    {
+      "position": 212,
+      "cipher_number": 5,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 213,
+      "cipher_number": 38,
+      "doi_word": "station",
+      "first_letter": "S",
+      "match": true
+    },
+    {
+      "position": 214,
+      "cipher_number": 8,
+      "doi_word": "it",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 215,
+      "cipher_number": 14,
+      "doi_word": "to",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 216,
+      "cipher_number": 84,
+      "doi_word": "created",
+      "first_letter": "C",
+      "match": true
+    },
+    {
+      "position": 217,
+      "cipher_number": 57,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 218,
+      "cipher_number": 540,
+      "doi_word": "population",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 219,
+      "cipher_number": 217,
+      "doi_word": "sufferable",
+      "first_letter": "S",
+      "match": true
+    },
+    {
+      "position": 220,
+      "cipher_number": 115,
+      "doi_word": "instituted",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 221,
+      "cipher_number": 71,
+      "doi_word": "separation",
+      "first_letter": "S",
+      "match": true
+    },
+    {
+      "position": 222,
+      "cipher_number": 29,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 223,
+      "cipher_number": 84,
+      "doi_word": "created",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 224,
+      "cipher_number": 63,
+      "doi_word": "declare",
+      "first_letter": "D",
+      "match": true
+    },
+    {
+      "position": 225,
+      "cipher_number": 43,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 226,
+      "cipher_number": 131,
+      "doi_word": "Form",
+      "first_letter": "F",
+      "match": true
+    },
+    {
+      "position": 227,
+      "cipher_number": 29,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 228,
+      "cipher_number": 138,
+      "doi_word": "ends",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 229,
+      "cipher_number": 47,
+      "doi_word": "Nature's",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 230,
+      "cipher_number": 73,
+      "doi_word": "hold",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 231,
+      "cipher_number": 239,
+      "doi_word": "usurpations",
+      "first_letter": "U",
+      "match": false
+    },
+    {
+      "position": 232,
+      "cipher_number": 540,
+      "doi_word": "population",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 233,
+      "cipher_number": 52,
+      "doi_word": "decent",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 234,
+      "cipher_number": 53,
+      "doi_word": "respect",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 235,
+      "cipher_number": 79,
+      "doi_word": "evident",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 236,
+      "cipher_number": 118,
+      "doi_word": "deriving",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 237,
+      "cipher_number": 51,
+      "doi_word": "a",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 238,
+      "cipher_number": 44,
+      "doi_word": "Nature",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 239,
+      "cipher_number": 63,
+      "doi_word": "declare",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 240,
+      "cipher_number": 196,
+      "doi_word": "for",
+      "first_letter": "F",
+      "match": false
+    },
+    {
+      "position": 241,
+      "cipher_number": 12,
+      "doi_word": "one",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 242,
+      "cipher_number": 239,
+      "doi_word": "usurpations",
+      "first_letter": "U",
+      "match": false
+    },
+    {
+      "position": 243,
+      "cipher_number": 112,
+      "doi_word": "rights",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 244,
+      "cipher_number": 3,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 245,
+      "cipher_number": 49,
+      "doi_word": "entitle",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 246,
+      "cipher_number": 79,
+      "doi_word": "evident",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 247,
+      "cipher_number": 353,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 248,
+      "cipher_number": 105,
+      "doi_word": "pursuit",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 249,
+      "cipher_number": 56,
+      "doi_word": "opinions",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 250,
+      "cipher_number": 371,
+      "doi_word": "importance",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 251,
+      "cipher_number": 557,
+      "doi_word": "others",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 252,
+      "cipher_number": 211,
+      "doi_word": "disposed",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 253,
+      "cipher_number": 505,
+      "doi_word": "have",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 254,
+      "cipher_number": 125,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 255,
+      "cipher_number": 360,
+      "doi_word": "has",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 256,
+      "cipher_number": 133,
+      "doi_word": "Government",
+      "first_letter": "G",
+      "match": false
+    },
+    {
+      "position": 257,
+      "cipher_number": 143,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 258,
+      "cipher_number": 101,
+      "doi_word": "Life",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 259,
+      "cipher_number": 15,
+      "doi_word": "dissolve",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 260,
+      "cipher_number": 284,
+      "doi_word": "Colonies",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 261,
+      "cipher_number": 540,
+      "doi_word": "population",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 262,
+      "cipher_number": 252,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 263,
+      "cipher_number": 14,
+      "doi_word": "to",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 264,
+      "cipher_number": 205,
+      "doi_word": "hath",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 265,
+      "cipher_number": 140,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 266,
+      "cipher_number": 344,
+      "doi_word": "has",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 267,
+      "cipher_number": 26,
+      "doi_word": "to",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 268,
+      "cipher_number": 811,
+      "doi_word": "Colonies",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 269,
+      "cipher_number": 138,
+      "doi_word": "ends",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 270,
+      "cipher_number": 115,
+      "doi_word": "instituted",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 271,
+      "cipher_number": 48,
+      "doi_word": "God",
+      "first_letter": "G",
+      "match": false
+    },
+    {
+      "position": 272,
+      "cipher_number": 73,
+      "doi_word": "hold",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 273,
+      "cipher_number": 34,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 274,
+      "cipher_number": 205,
+      "doi_word": "hath",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 275,
+      "cipher_number": 316,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 276,
+      "cipher_number": 607,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 277,
+      "cipher_number": 63,
+      "doi_word": "declare",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 278,
+      "cipher_number": 220,
+      "doi_word": "right",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 279,
+      "cipher_number": 7,
+      "doi_word": "events",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 280,
+      "cipher_number": 52,
+      "doi_word": "decent",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 281,
+      "cipher_number": 150,
+      "doi_word": "abolish",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 282,
+      "cipher_number": 44,
+      "doi_word": "Nature",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 283,
+      "cipher_number": 52,
+      "doi_word": "decent",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 284,
+      "cipher_number": 16,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 285,
+      "cipher_number": 40,
+      "doi_word": "which",
+      "first_letter": "W",
+      "match": false
+    },
+    {
+      "position": 286,
+      "cipher_number": 37,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 287,
+      "cipher_number": 158,
+      "doi_word": "laying",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 288,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 289,
+      "cipher_number": 37,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 290,
+      "cipher_number": 121,
+      "doi_word": "powers",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 291,
+      "cipher_number": 12,
+      "doi_word": "one",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 292,
+      "cipher_number": 95,
+      "doi_word": "inalienable",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 293,
+      "cipher_number": 10,
+      "doi_word": "necessary",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 294,
+      "cipher_number": 15,
+      "doi_word": "dissolve",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 295,
+      "cipher_number": 35,
+      "doi_word": "separate",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 296,
+      "cipher_number": 12,
+      "doi_word": "one",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 297,
+      "cipher_number": 131,
+      "doi_word": "Form",
+      "first_letter": "F",
+      "match": false
+    },
+    {
+      "position": 298,
+      "cipher_number": 62,
+      "doi_word": "should",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 299,
+      "cipher_number": 115,
+      "doi_word": "instituted",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 300,
+      "cipher_number": 102,
+      "doi_word": "Liberty",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 301,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 302,
+      "cipher_number": 49,
+      "doi_word": "entitle",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 303,
+      "cipher_number": 53,
+      "doi_word": "respect",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 304,
+      "cipher_number": 135,
+      "doi_word": "destructive",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 305,
+      "cipher_number": 138,
+      "doi_word": "ends",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 306,
+      "cipher_number": 30,
+      "doi_word": "Powers",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 307,
+      "cipher_number": 31,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 308,
+      "cipher_number": 62,
+      "doi_word": "should",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 309,
+      "cipher_number": 67,
+      "doi_word": "impel",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 310,
+      "cipher_number": 41,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 311,
+      "cipher_number": 85,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 312,
+      "cipher_number": 63,
+      "doi_word": "declare",
+      "first_letter": "D",
+      "match": true
+    },
+    {
+      "position": 313,
+      "cipher_number": 10,
+      "doi_word": "necessary",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 314,
+      "cipher_number": 106,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 315,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 316,
+      "cipher_number": 138,
+      "doi_word": "ends",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 317,
+      "cipher_number": 8,
+      "doi_word": "it",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 318,
+      "cipher_number": 113,
+      "doi_word": "Governments",
+      "first_letter": "G",
+      "match": false
+    },
+    {
+      "position": 319,
+      "cipher_number": 20,
+      "doi_word": "have",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 320,
+      "cipher_number": 32,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 321,
+      "cipher_number": 33,
+      "doi_word": "earth",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 322,
+      "cipher_number": 37,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 323,
+      "cipher_number": 353,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 324,
+      "cipher_number": 287,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 325,
+      "cipher_number": 140,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 326,
+      "cipher_number": 47,
+      "doi_word": "Nature's",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 327,
+      "cipher_number": 85,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 328,
+      "cipher_number": 50,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 329,
+      "cipher_number": 37,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 330,
+      "cipher_number": 49,
+      "doi_word": "entitle",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 331,
+      "cipher_number": 47,
+      "doi_word": "Nature's",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 332,
+      "cipher_number": 64,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 333,
+      "cipher_number": 6,
+      "doi_word": "human",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 334,
+      "cipher_number": 7,
+      "doi_word": "events",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 335,
+      "cipher_number": 71,
+      "doi_word": "separation",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 336,
+      "cipher_number": 33,
+      "doi_word": "earth",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 337,
+      "cipher_number": 4,
+      "doi_word": "Course",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 338,
+      "cipher_number": 43,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 339,
+      "cipher_number": 47,
+      "doi_word": "Nature's",
+      "first_letter": "N",
+      "match": true
+    },
+    {
+      "position": 340,
+      "cipher_number": 63,
+      "doi_word": "declare",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 341,
+      "cipher_number": 1,
+      "doi_word": "When",
+      "first_letter": "W",
+      "match": false
+    },
+    {
+      "position": 342,
+      "cipher_number": 27,
+      "doi_word": "assume",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 343,
+      "cipher_number": 600,
+      "doi_word": "tenure",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 344,
+      "cipher_number": 208,
+      "doi_word": "mankind",
+      "first_letter": "M",
+      "match": false
+    },
+    {
+      "position": 345,
+      "cipher_number": 230,
+      "doi_word": "accustomed",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 346,
+      "cipher_number": 15,
+      "doi_word": "dissolve",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 347,
+      "cipher_number": 191,
+      "doi_word": "established",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 348,
+      "cipher_number": 246,
+      "doi_word": "a",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 349,
+      "cipher_number": 85,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 350,
+      "cipher_number": 94,
+      "doi_word": "certain",
+      "first_letter": "C",
+      "match": true
+    },
+    {
+      "position": 351,
+      "cipher_number": 511,
+      "doi_word": "large",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 352,
+      "cipher_number": 2,
+      "doi_word": "in",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 353,
+      "cipher_number": 270,
+      "doi_word": "new",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 354,
+      "cipher_number": 20,
+      "doi_word": "have",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 355,
+      "cipher_number": 39,
+      "doi_word": "to",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 356,
+      "cipher_number": 7,
+      "doi_word": "events",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 357,
+      "cipher_number": 33,
+      "doi_word": "earth",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 358,
+      "cipher_number": 44,
+      "doi_word": "Nature",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 359,
+      "cipher_number": 22,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 360,
+      "cipher_number": 40,
+      "doi_word": "which",
+      "first_letter": "W",
+      "match": false
+    },
+    {
+      "position": 361,
+      "cipher_number": 7,
+      "doi_word": "events",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 362,
+      "cipher_number": 10,
+      "doi_word": "necessary",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 363,
+      "cipher_number": 3,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 364,
+      "cipher_number": 811,
+      "doi_word": "Colonies",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 365,
+      "cipher_number": 106,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 366,
+      "cipher_number": 44,
+      "doi_word": "Nature",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 367,
+      "cipher_number": 486,
+      "doi_word": "a",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 368,
+      "cipher_number": 230,
+      "doi_word": "accustomed",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 369,
+      "cipher_number": 353,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 370,
+      "cipher_number": 211,
+      "doi_word": "disposed",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 371,
+      "cipher_number": 200,
+      "doi_word": "causes",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 372,
+      "cipher_number": 31,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 373,
+      "cipher_number": 10,
+      "doi_word": "necessary",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 374,
+      "cipher_number": 38,
+      "doi_word": "station",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 375,
+      "cipher_number": 140,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 376,
+      "cipher_number": 297,
+      "doi_word": "former",
+      "first_letter": "F",
+      "match": false
+    },
+    {
+      "position": 377,
+      "cipher_number": 61,
+      "doi_word": "they",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 378,
+      "cipher_number": 603,
+      "doi_word": "offices",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 379,
+      "cipher_number": 320,
+      "doi_word": "in",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 380,
+      "cipher_number": 302,
+      "doi_word": "history",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 381,
+      "cipher_number": 666,
+      "doi_word": "Power",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 382,
+      "cipher_number": 287,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 383,
+      "cipher_number": 2,
+      "doi_word": "in",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 384,
+      "cipher_number": 44,
+      "doi_word": "Nature",
+      "first_letter": "N",
+      "match": true
+    },
+    {
+      "position": 385,
+      "cipher_number": 33,
+      "doi_word": "earth",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 386,
+      "cipher_number": 32,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 387,
+      "cipher_number": 511,
+      "doi_word": "large",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 388,
+      "cipher_number": 548,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 389,
+      "cipher_number": 10,
+      "doi_word": "necessary",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 390,
+      "cipher_number": 6,
+      "doi_word": "human",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 391,
+      "cipher_number": 250,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 392,
+      "cipher_number": 557,
+      "doi_word": "others",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 393,
+      "cipher_number": 246,
+      "doi_word": "a",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 394,
+      "cipher_number": 53,
+      "doi_word": "respect",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 395,
+      "cipher_number": 37,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 396,
+      "cipher_number": 52,
+      "doi_word": "decent",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 397,
+      "cipher_number": 83,
+      "doi_word": "are",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 398,
+      "cipher_number": 47,
+      "doi_word": "Nature's",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 399,
+      "cipher_number": 320,
+      "doi_word": "in",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 400,
+      "cipher_number": 38,
+      "doi_word": "station",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 401,
+      "cipher_number": 33,
+      "doi_word": "earth",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 402,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 403,
+      "cipher_number": 7,
+      "doi_word": "events",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 404,
+      "cipher_number": 44,
+      "doi_word": "Nature",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 405,
+      "cipher_number": 30,
+      "doi_word": "Powers",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 406,
+      "cipher_number": 31,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 407,
+      "cipher_number": 250,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 408,
+      "cipher_number": 10,
+      "doi_word": "necessary",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 409,
+      "cipher_number": 15,
+      "doi_word": "dissolve",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 410,
+      "cipher_number": 35,
+      "doi_word": "separate",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 411,
+      "cipher_number": 106,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 412,
+      "cipher_number": 160,
+      "doi_word": "foundation",
+      "first_letter": "F",
+      "match": false
+    },
+    {
+      "position": 413,
+      "cipher_number": 113,
+      "doi_word": "Governments",
+      "first_letter": "G",
+      "match": false
+    },
+    {
+      "position": 414,
+      "cipher_number": 31,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 415,
+      "cipher_number": 102,
+      "doi_word": "Liberty",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 416,
+      "cipher_number": 406,
+      "doi_word": "large",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 417,
+      "cipher_number": 230,
+      "doi_word": "accustomed",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 418,
+      "cipher_number": 540,
+      "doi_word": "population",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 419,
+      "cipher_number": 320,
+      "doi_word": "in",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 420,
+      "cipher_number": 29,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 421,
+      "cipher_number": 66,
+      "doi_word": "which",
+      "first_letter": "W",
+      "match": false
+    },
+    {
+      "position": 422,
+      "cipher_number": 33,
+      "doi_word": "earth",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 423,
+      "cipher_number": 101,
+      "doi_word": "Life",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 424,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 425,
+      "cipher_number": 138,
+      "doi_word": "ends",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 426,
+      "cipher_number": 301,
+      "doi_word": "The",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 427,
+      "cipher_number": 316,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 428,
+      "cipher_number": 353,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 429,
+      "cipher_number": 320,
+      "doi_word": "in",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 430,
+      "cipher_number": 220,
+      "doi_word": "right",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 431,
+      "cipher_number": 37,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 432,
+      "cipher_number": 52,
+      "doi_word": "decent",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 433,
+      "cipher_number": 28,
+      "doi_word": "among",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 434,
+      "cipher_number": 540,
+      "doi_word": "population",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 435,
+      "cipher_number": 320,
+      "doi_word": "in",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 436,
+      "cipher_number": 33,
+      "doi_word": "earth",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 437,
+      "cipher_number": 8,
+      "doi_word": "it",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 438,
+      "cipher_number": 48,
+      "doi_word": "God",
+      "first_letter": "G",
+      "match": false
+    },
+    {
+      "position": 439,
+      "cipher_number": 107,
+      "doi_word": "Happiness",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 440,
+      "cipher_number": 50,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 441,
+      "cipher_number": 811,
+      "doi_word": "Colonies",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 442,
+      "cipher_number": 7,
+      "doi_word": "events",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 443,
+      "cipher_number": 2,
+      "doi_word": "in",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 444,
+      "cipher_number": 113,
+      "doi_word": "Governments",
+      "first_letter": "G",
+      "match": false
+    },
+    {
+      "position": 445,
+      "cipher_number": 73,
+      "doi_word": "hold",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 446,
+      "cipher_number": 16,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 447,
+      "cipher_number": 125,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 448,
+      "cipher_number": 11,
+      "doi_word": "for",
+      "first_letter": "F",
+      "match": false
+    },
+    {
+      "position": 449,
+      "cipher_number": 110,
+      "doi_word": "secure",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 450,
+      "cipher_number": 67,
+      "doi_word": "impel",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 451,
+      "cipher_number": 102,
+      "doi_word": "Liberty",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 452,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 453,
+      "cipher_number": 33,
+      "doi_word": "earth",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 454,
+      "cipher_number": 59,
+      "doi_word": "requires",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 455,
+      "cipher_number": 81,
+      "doi_word": "all",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 456,
+      "cipher_number": 158,
+      "doi_word": "laying",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 457,
+      "cipher_number": 38,
+      "doi_word": "station",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 458,
+      "cipher_number": 43,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 459,
+      "cipher_number": 581,
+      "doi_word": "his",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 460,
+      "cipher_number": 138,
+      "doi_word": "ends",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 461,
+      "cipher_number": 19,
+      "doi_word": "which",
+      "first_letter": "W",
+      "match": false
+    },
+    {
+      "position": 462,
+      "cipher_number": 85,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 463,
+      "cipher_number": 400,
+      "doi_word": "other",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 464,
+      "cipher_number": 38,
+      "doi_word": "station",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 465,
+      "cipher_number": 43,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 466,
+      "cipher_number": 77,
+      "doi_word": "be",
+      "first_letter": "B",
+      "match": false
+    },
+    {
+      "position": 467,
+      "cipher_number": 14,
+      "doi_word": "to",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 468,
+      "cipher_number": 27,
+      "doi_word": "assume",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 469,
+      "cipher_number": 8,
+      "doi_word": "it",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 470,
+      "cipher_number": 47,
+      "doi_word": "Nature's",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 471,
+      "cipher_number": 138,
+      "doi_word": "ends",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 472,
+      "cipher_number": 63,
+      "doi_word": "declare",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 473,
+      "cipher_number": 140,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 474,
+      "cipher_number": 44,
+      "doi_word": "Nature",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 475,
+      "cipher_number": 35,
+      "doi_word": "separate",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 476,
+      "cipher_number": 22,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 477,
+      "cipher_number": 177,
+      "doi_word": "likely",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 478,
+      "cipher_number": 106,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 479,
+      "cipher_number": 250,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 480,
+      "cipher_number": 314,
+      "doi_word": "repeated",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 481,
+      "cipher_number": 217,
+      "doi_word": "sufferable",
+      "first_letter": "S",
+      "match": true
+    },
+    {
+      "position": 482,
+      "cipher_number": 2,
+      "doi_word": "in",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 483,
+      "cipher_number": 10,
+      "doi_word": "necessary",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 484,
+      "cipher_number": 7,
+      "doi_word": "events",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 485,
+      "cipher_number": 1005,
+      "doi_word": "We",
+      "first_letter": "W",
+      "match": true
+    },
+    {
+      "position": 486,
+      "cipher_number": 4,
+      "doi_word": "Course",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 487,
+      "cipher_number": 20,
+      "doi_word": "have",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 488,
+      "cipher_number": 25,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 489,
+      "cipher_number": 44,
+      "doi_word": "Nature",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 490,
+      "cipher_number": 48,
+      "doi_word": "God",
+      "first_letter": "G",
+      "match": false
+    },
+    {
+      "position": 491,
+      "cipher_number": 7,
+      "doi_word": "events",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 492,
+      "cipher_number": 26,
+      "doi_word": "to",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 493,
+      "cipher_number": 46,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 494,
+      "cipher_number": 110,
+      "doi_word": "secure",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 495,
+      "cipher_number": 230,
+      "doi_word": "accustomed",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 496,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 497,
+      "cipher_number": 191,
+      "doi_word": "established",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 498,
+      "cipher_number": 34,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 499,
+      "cipher_number": 112,
+      "doi_word": "rights",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 500,
+      "cipher_number": 147,
+      "doi_word": "alter",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 501,
+      "cipher_number": 44,
+      "doi_word": "Nature",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 502,
+      "cipher_number": 110,
+      "doi_word": "secure",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 503,
+      "cipher_number": 121,
+      "doi_word": "powers",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 504,
+      "cipher_number": 125,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 505,
+      "cipher_number": 96,
+      "doi_word": "Rights",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 506,
+      "cipher_number": 41,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 507,
+      "cipher_number": 51,
+      "doi_word": "a",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 508,
+      "cipher_number": 50,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 509,
+      "cipher_number": 140,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 510,
+      "cipher_number": 56,
+      "doi_word": "opinions",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 511,
+      "cipher_number": 47,
+      "doi_word": "Nature's",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 512,
+      "cipher_number": 152,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": true
+    },
+    {
+      "position": 513,
+      "cipher_number": 540,
+      "doi_word": "population",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 514,
+      "cipher_number": 63,
+      "doi_word": "declare",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 515,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 516,
+      "cipher_number": 28,
+      "doi_word": "among",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 517,
+      "cipher_number": 42,
+      "doi_word": "Laws",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 518,
+      "cipher_number": 250,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 519,
+      "cipher_number": 138,
+      "doi_word": "ends",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 520,
+      "cipher_number": 582,
+      "doi_word": "Assent",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 521,
+      "cipher_number": 98,
+      "doi_word": "among",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 522,
+      "cipher_number": 643,
+      "doi_word": "peace",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 523,
+      "cipher_number": 32,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 524,
+      "cipher_number": 107,
+      "doi_word": "Happiness",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 525,
+      "cipher_number": 140,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 526,
+      "cipher_number": 112,
+      "doi_word": "rights",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 527,
+      "cipher_number": 26,
+      "doi_word": "to",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 528,
+      "cipher_number": 85,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 529,
+      "cipher_number": 138,
+      "doi_word": "ends",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 530,
+      "cipher_number": 540,
+      "doi_word": "population",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 531,
+      "cipher_number": 53,
+      "doi_word": "respect",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 532,
+      "cipher_number": 20,
+      "doi_word": "have",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 533,
+      "cipher_number": 125,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 534,
+      "cipher_number": 371,
+      "doi_word": "importance",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 535,
+      "cipher_number": 38,
+      "doi_word": "station",
+      "first_letter": "S",
+      "match": true
+    },
+    {
+      "position": 536,
+      "cipher_number": 36,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 537,
+      "cipher_number": 10,
+      "doi_word": "necessary",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 538,
+      "cipher_number": 52,
+      "doi_word": "decent",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 539,
+      "cipher_number": 118,
+      "doi_word": "deriving",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 540,
+      "cipher_number": 136,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 541,
+      "cipher_number": 102,
+      "doi_word": "Liberty",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 542,
+      "cipher_number": 420,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 543,
+      "cipher_number": 150,
+      "doi_word": "abolish",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 544,
+      "cipher_number": 112,
+      "doi_word": "rights",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 545,
+      "cipher_number": 71,
+      "doi_word": "separation",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 546,
+      "cipher_number": 14,
+      "doi_word": "to",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 547,
+      "cipher_number": 20,
+      "doi_word": "have",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 548,
+      "cipher_number": 7,
+      "doi_word": "events",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 549,
+      "cipher_number": 24,
+      "doi_word": "another",
+      "first_letter": "A",
+      "match": true
+    },
+    {
+      "position": 550,
+      "cipher_number": 18,
+      "doi_word": "bands",
+      "first_letter": "B",
+      "match": false
+    },
+    {
+      "position": 551,
+      "cipher_number": 12,
+      "doi_word": "one",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 552,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 553,
+      "cipher_number": 37,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 554,
+      "cipher_number": 67,
+      "doi_word": "impel",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 555,
+      "cipher_number": 110,
+      "doi_word": "secure",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 556,
+      "cipher_number": 62,
+      "doi_word": "should",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 557,
+      "cipher_number": 33,
+      "doi_word": "earth",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 558,
+      "cipher_number": 21,
+      "doi_word": "connected",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 559,
+      "cipher_number": 95,
+      "doi_word": "inalienable",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 560,
+      "cipher_number": 220,
+      "doi_word": "right",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 561,
+      "cipher_number": 511,
+      "doi_word": "large",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 562,
+      "cipher_number": 102,
+      "doi_word": "Liberty",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 563,
+      "cipher_number": 811,
+      "doi_word": "Colonies",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 564,
+      "cipher_number": 30,
+      "doi_word": "Powers",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 565,
+      "cipher_number": 83,
+      "doi_word": "are",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 566,
+      "cipher_number": 84,
+      "doi_word": "created",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 567,
+      "cipher_number": 305,
+      "doi_word": "present",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 568,
+      "cipher_number": 620,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 569,
+      "cipher_number": 15,
+      "doi_word": "dissolve",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 570,
+      "cipher_number": 2,
+      "doi_word": "in",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 571,
+      "cipher_number": 10,
+      "doi_word": "necessary",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 572,
+      "cipher_number": 8,
+      "doi_word": "it",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 573,
+      "cipher_number": 220,
+      "doi_word": "right",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 574,
+      "cipher_number": 106,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 575,
+      "cipher_number": 353,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 576,
+      "cipher_number": 105,
+      "doi_word": "pursuit",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 577,
+      "cipher_number": 106,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 578,
+      "cipher_number": 60,
+      "doi_word": "that",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 579,
+      "cipher_number": 275,
+      "doi_word": "security",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 580,
+      "cipher_number": 72,
+      "doi_word": "We",
+      "first_letter": "W",
+      "match": false
+    },
+    {
+      "position": 581,
+      "cipher_number": 8,
+      "doi_word": "it",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 582,
+      "cipher_number": 50,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 583,
+      "cipher_number": 205,
+      "doi_word": "hath",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 584,
+      "cipher_number": 185,
+      "doi_word": "indeed",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 585,
+      "cipher_number": 112,
+      "doi_word": "rights",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 586,
+      "cipher_number": 125,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 587,
+      "cipher_number": 540,
+      "doi_word": "population",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 588,
+      "cipher_number": 65,
+      "doi_word": "causes",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 589,
+      "cipher_number": 106,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 590,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 591,
+      "cipher_number": 138,
+      "doi_word": "ends",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 592,
+      "cipher_number": 96,
+      "doi_word": "Rights",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 593,
+      "cipher_number": 110,
+      "doi_word": "secure",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 594,
+      "cipher_number": 16,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 595,
+      "cipher_number": 73,
+      "doi_word": "hold",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 596,
+      "cipher_number": 33,
+      "doi_word": "earth",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 597,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 598,
+      "cipher_number": 150,
+      "doi_word": "abolish",
+      "first_letter": "A",
+      "match": true
+    },
+    {
+      "position": 599,
+      "cipher_number": 409,
+      "doi_word": "people",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 600,
+      "cipher_number": 400,
+      "doi_word": "other",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 601,
+      "cipher_number": 50,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 602,
+      "cipher_number": 154,
+      "doi_word": "institute",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 603,
+      "cipher_number": 285,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 604,
+      "cipher_number": 96,
+      "doi_word": "Rights",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 605,
+      "cipher_number": 106,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 606,
+      "cipher_number": 316,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 607,
+      "cipher_number": 270,
+      "doi_word": "new",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 608,
+      "cipher_number": 205,
+      "doi_word": "hath",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 609,
+      "cipher_number": 101,
+      "doi_word": "Life",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 610,
+      "cipher_number": 811,
+      "doi_word": "Colonies",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 611,
+      "cipher_number": 400,
+      "doi_word": "other",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 612,
+      "cipher_number": 8,
+      "doi_word": "it",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 613,
+      "cipher_number": 44,
+      "doi_word": "Nature",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 614,
+      "cipher_number": 37,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 615,
+      "cipher_number": 52,
+      "doi_word": "decent",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 616,
+      "cipher_number": 40,
+      "doi_word": "which",
+      "first_letter": "W",
+      "match": false
+    },
+    {
+      "position": 617,
+      "cipher_number": 241,
+      "doi_word": "invariably",
+      "first_letter": "I",
+      "match": true
+    },
+    {
+      "position": 618,
+      "cipher_number": 34,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 619,
+      "cipher_number": 205,
+      "doi_word": "hath",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 620,
+      "cipher_number": 38,
+      "doi_word": "station",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 621,
+      "cipher_number": 16,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 622,
+      "cipher_number": 46,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": true
+    },
+    {
+      "position": 623,
+      "cipher_number": 47,
+      "doi_word": "Nature's",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 624,
+      "cipher_number": 85,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 625,
+      "cipher_number": 24,
+      "doi_word": "another",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 626,
+      "cipher_number": 44,
+      "doi_word": "Nature",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 627,
+      "cipher_number": 15,
+      "doi_word": "dissolve",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 628,
+      "cipher_number": 64,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 629,
+      "cipher_number": 73,
+      "doi_word": "hold",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 630,
+      "cipher_number": 138,
+      "doi_word": "ends",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 631,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": true
+    },
+    {
+      "position": 632,
+      "cipher_number": 85,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 633,
+      "cipher_number": 78,
+      "doi_word": "self",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 634,
+      "cipher_number": 110,
+      "doi_word": "secure",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 635,
+      "cipher_number": 33,
+      "doi_word": "earth",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 636,
+      "cipher_number": 420,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 637,
+      "cipher_number": 505,
+      "doi_word": "have",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 638,
+      "cipher_number": 53,
+      "doi_word": "respect",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 639,
+      "cipher_number": 37,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 640,
+      "cipher_number": 38,
+      "doi_word": "station",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 641,
+      "cipher_number": 22,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 642,
+      "cipher_number": 31,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 643,
+      "cipher_number": 10,
+      "doi_word": "necessary",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 644,
+      "cipher_number": 110,
+      "doi_word": "secure",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 645,
+      "cipher_number": 106,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 646,
+      "cipher_number": 101,
+      "doi_word": "Life",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 647,
+      "cipher_number": 140,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 648,
+      "cipher_number": 15,
+      "doi_word": "dissolve",
+      "first_letter": "D",
+      "match": true
+    },
+    {
+      "position": 649,
+      "cipher_number": 38,
+      "doi_word": "station",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 650,
+      "cipher_number": 3,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 651,
+      "cipher_number": 5,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 652,
+      "cipher_number": 44,
+      "doi_word": "Nature",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 653,
+      "cipher_number": 7,
+      "doi_word": "events",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 654,
+      "cipher_number": 98,
+      "doi_word": "among",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 655,
+      "cipher_number": 287,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 656,
+      "cipher_number": 135,
+      "doi_word": "destructive",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 657,
+      "cipher_number": 150,
+      "doi_word": "abolish",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 658,
+      "cipher_number": 96,
+      "doi_word": "Rights",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 659,
+      "cipher_number": 33,
+      "doi_word": "earth",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 660,
+      "cipher_number": 84,
+      "doi_word": "created",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 661,
+      "cipher_number": 125,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 662,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 663,
+      "cipher_number": 191,
+      "doi_word": "established",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 664,
+      "cipher_number": 96,
+      "doi_word": "Rights",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 665,
+      "cipher_number": 511,
+      "doi_word": "large",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 666,
+      "cipher_number": 118,
+      "doi_word": "deriving",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 667,
+      "cipher_number": 40,
+      "doi_word": "which",
+      "first_letter": "W",
+      "match": false
+    },
+    {
+      "position": 668,
+      "cipher_number": 370,
+      "doi_word": "pressing",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 669,
+      "cipher_number": 643,
+      "doi_word": "peace",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 670,
+      "cipher_number": 466,
+      "doi_word": "Representative",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 671,
+      "cipher_number": 106,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 672,
+      "cipher_number": 41,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 673,
+      "cipher_number": 107,
+      "doi_word": "Happiness",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 674,
+      "cipher_number": 603,
+      "doi_word": "offices",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 675,
+      "cipher_number": 220,
+      "doi_word": "right",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 676,
+      "cipher_number": 275,
+      "doi_word": "security",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 677,
+      "cipher_number": 30,
+      "doi_word": "Powers",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 678,
+      "cipher_number": 150,
+      "doi_word": "abolish",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 679,
+      "cipher_number": 105,
+      "doi_word": "pursuit",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 680,
+      "cipher_number": 49,
+      "doi_word": "entitle",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 681,
+      "cipher_number": 53,
+      "doi_word": "respect",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 682,
+      "cipher_number": 287,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 683,
+      "cipher_number": 250,
+      "doi_word": "them",
+      "first_letter": "T",
+      "match": true
+    },
+    {
+      "position": 684,
+      "cipher_number": 208,
+      "doi_word": "mankind",
+      "first_letter": "M",
+      "match": false
+    },
+    {
+      "position": 685,
+      "cipher_number": 134,
+      "doi_word": "becomes",
+      "first_letter": "B",
+      "match": false
+    },
+    {
+      "position": 686,
+      "cipher_number": 7,
+      "doi_word": "events",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 687,
+      "cipher_number": 53,
+      "doi_word": "respect",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 688,
+      "cipher_number": 12,
+      "doi_word": "one",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 689,
+      "cipher_number": 47,
+      "doi_word": "Nature's",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 690,
+      "cipher_number": 85,
+      "doi_word": "equal",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 691,
+      "cipher_number": 63,
+      "doi_word": "declare",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 692,
+      "cipher_number": 138,
+      "doi_word": "ends",
+      "first_letter": "E",
+      "match": true
+    },
+    {
+      "position": 693,
+      "cipher_number": 110,
+      "doi_word": "secure",
+      "first_letter": "S",
+      "match": false
+    },
+    {
+      "position": 694,
+      "cipher_number": 21,
+      "doi_word": "connected",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 695,
+      "cipher_number": 112,
+      "doi_word": "rights",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 696,
+      "cipher_number": 140,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 697,
+      "cipher_number": 485,
+      "doi_word": "for",
+      "first_letter": "F",
+      "match": false
+    },
+    {
+      "position": 698,
+      "cipher_number": 486,
+      "doi_word": "a",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 699,
+      "cipher_number": 505,
+      "doi_word": "have",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 700,
+      "cipher_number": 14,
+      "doi_word": "to",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 701,
+      "cipher_number": 73,
+      "doi_word": "hold",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 702,
+      "cipher_number": 84,
+      "doi_word": "created",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 703,
+      "cipher_number": 575,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 704,
+      "cipher_number": 1005,
+      "doi_word": "We",
+      "first_letter": "W",
+      "match": false
+    },
+    {
+      "position": 705,
+      "cipher_number": 150,
+      "doi_word": "abolish",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 706,
+      "cipher_number": 200,
+      "doi_word": "causes",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 707,
+      "cipher_number": 16,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 708,
+      "cipher_number": 42,
+      "doi_word": "Laws",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 709,
+      "cipher_number": 5,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 710,
+      "cipher_number": 4,
+      "doi_word": "Course",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 711,
+      "cipher_number": 25,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": true
+    },
+    {
+      "position": 712,
+      "cipher_number": 42,
+      "doi_word": "Laws",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 713,
+      "cipher_number": 8,
+      "doi_word": "it",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 714,
+      "cipher_number": 16,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 715,
+      "cipher_number": 811,
+      "doi_word": "Colonies",
+      "first_letter": "C",
+      "match": false
+    },
+    {
+      "position": 716,
+      "cipher_number": 125,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 717,
+      "cipher_number": 160,
+      "doi_word": "foundation",
+      "first_letter": "F",
+      "match": false
+    },
+    {
+      "position": 718,
+      "cipher_number": 32,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 719,
+      "cipher_number": 205,
+      "doi_word": "hath",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 720,
+      "cipher_number": 603,
+      "doi_word": "offices",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 721,
+      "cipher_number": 807,
+      "doi_word": "absolute",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 722,
+      "cipher_number": 81,
+      "doi_word": "all",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 723,
+      "cipher_number": 96,
+      "doi_word": "Rights",
+      "first_letter": "R",
+      "match": false
+    },
+    {
+      "position": 724,
+      "cipher_number": 405,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 725,
+      "cipher_number": 41,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 726,
+      "cipher_number": 600,
+      "doi_word": "tenure",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 727,
+      "cipher_number": 136,
+      "doi_word": "of",
+      "first_letter": "O",
+      "match": false
+    },
+    {
+      "position": 728,
+      "cipher_number": 14,
+      "doi_word": "to",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 729,
+      "cipher_number": 20,
+      "doi_word": "have",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 730,
+      "cipher_number": 28,
+      "doi_word": "among",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 731,
+      "cipher_number": 26,
+      "doi_word": "to",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 732,
+      "cipher_number": 353,
+      "doi_word": "and",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 733,
+      "cipher_number": 302,
+      "doi_word": "history",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 734,
+      "cipher_number": 246,
+      "doi_word": "a",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 735,
+      "cipher_number": 8,
+      "doi_word": "it",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 736,
+      "cipher_number": 131,
+      "doi_word": "Form",
+      "first_letter": "F",
+      "match": false
+    },
+    {
+      "position": 737,
+      "cipher_number": 160,
+      "doi_word": "foundation",
+      "first_letter": "F",
+      "match": false
+    },
+    {
+      "position": 738,
+      "cipher_number": 140,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 739,
+      "cipher_number": 84,
+      "doi_word": "created",
+      "first_letter": "C",
+      "match": true
+    },
+    {
+      "position": 740,
+      "cipher_number": 440,
+      "doi_word": "unusual",
+      "first_letter": "U",
+      "match": false
+    },
+    {
+      "position": 741,
+      "cipher_number": 42,
+      "doi_word": "Laws",
+      "first_letter": "L",
+      "match": true
+    },
+    {
+      "position": 742,
+      "cipher_number": 16,
+      "doi_word": "the",
+      "first_letter": "T",
+      "match": false
+    },
+    {
+      "position": 743,
+      "cipher_number": 811,
+      "doi_word": "Colonies",
+      "first_letter": "C",
+      "match": true
+    },
+    {
+      "position": 744,
+      "cipher_number": 40,
+      "doi_word": "which",
+      "first_letter": "W",
+      "match": false
+    },
+    {
+      "position": 745,
+      "cipher_number": 67,
+      "doi_word": "impel",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 746,
+      "cipher_number": 101,
+      "doi_word": "Life",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 747,
+      "cipher_number": 102,
+      "doi_word": "Liberty",
+      "first_letter": "L",
+      "match": false
+    },
+    {
+      "position": 748,
+      "cipher_number": 194,
+      "doi_word": "be",
+      "first_letter": "B",
+      "match": false
+    },
+    {
+      "position": 749,
+      "cipher_number": 138,
+      "doi_word": "ends",
+      "first_letter": "E",
+      "match": false
+    },
+    {
+      "position": 750,
+      "cipher_number": 205,
+      "doi_word": "hath",
+      "first_letter": "H",
+      "match": false
+    },
+    {
+      "position": 751,
+      "cipher_number": 51,
+      "doi_word": "a",
+      "first_letter": "A",
+      "match": false
+    },
+    {
+      "position": 752,
+      "cipher_number": 63,
+      "doi_word": "declare",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 753,
+      "cipher_number": 241,
+      "doi_word": "invariably",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 754,
+      "cipher_number": 540,
+      "doi_word": "population",
+      "first_letter": "P",
+      "match": false
+    },
+    {
+      "position": 755,
+      "cipher_number": 122,
+      "doi_word": "from",
+      "first_letter": "F",
+      "match": false
+    },
+    {
+      "position": 756,
+      "cipher_number": 8,
+      "doi_word": "it",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 757,
+      "cipher_number": 10,
+      "doi_word": "necessary",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 758,
+      "cipher_number": 63,
+      "doi_word": "declare",
+      "first_letter": "D",
+      "match": false
+    },
+    {
+      "position": 759,
+      "cipher_number": 140,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 760,
+      "cipher_number": 47,
+      "doi_word": "Nature's",
+      "first_letter": "N",
+      "match": false
+    },
+    {
+      "position": 761,
+      "cipher_number": 48,
+      "doi_word": "God",
+      "first_letter": "G",
+      "match": false
+    },
+    {
+      "position": 762,
+      "cipher_number": 140,
+      "doi_word": "is",
+      "first_letter": "I",
+      "match": false
+    },
+    {
+      "position": 763,
+      "cipher_number": 288,
+      "doi_word": "now",
+      "first_letter": "N",
+      "match": false
+    }
+  ]
+}
