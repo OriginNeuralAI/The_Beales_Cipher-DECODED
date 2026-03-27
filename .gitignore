@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+*.whl
+.venv/
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# Editors
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# LaTeX aux
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+
+# Generator scripts (contain API keys)
+generate_images.py
+
+# Build artifacts
+*.o
+*.d
+*.rlib
+*.rmeta
+*.dylib
+*.so
+*.dll
+*.exe

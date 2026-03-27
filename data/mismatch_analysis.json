@@ -1,0 +1,52 @@
+{
+  "description": "Resolution of 22 B2 decode mismatches into 4 systematic groups",
+  "total_mismatches": 22,
+  "groups": [
+    {
+      "group": "A",
+      "cipher_number": 95,
+      "count": 3,
+      "decoded": "I",
+      "expected": "U",
+      "explanation": "Dunlap spelling: inalienable vs unalienable",
+      "status": "SOLVED"
+    },
+    {
+      "group": "B",
+      "cipher_number": 84,
+      "count": 2,
+      "decoded": "C",
+      "expected": "E",
+      "explanation": "Off-by-1 miscount at position 84 (created->equal)",
+      "status": "SOLVED"
+    },
+    {
+      "group": "C",
+      "cipher_number": 811,
+      "count": 9,
+      "decoded": "C",
+      "expected": "Y",
+      "explanation": "Y-word edition difference: standard DoI has no Y-words",
+      "status": "EDITION"
+    },
+    {
+      "group": "D",
+      "cipher_number": 1005,
+      "count": 4,
+      "decoded": "W",
+      "expected": "X",
+      "explanation": "X-word beyond standard DoI (zero X-words in 1322 words)",
+      "status": "EDITION"
+    },
+    {
+      "group": "orphan",
+      "cipher_number": "various",
+      "count": 4,
+      "decoded": "various",
+      "expected": "various",
+      "explanation": "Transcription errors (29->N, 47->T, 53->T, 811->D)",
+      "status": "TESTED"
+    }
+  ],
+  "accuracy_after_correction": "99.0% (755/763)"
+}

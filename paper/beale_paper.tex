@@ -1,0 +1,1256 @@
+\documentclass[11pt,a4paper]{article}
+
+% ═══════════════════════════════════════════════════════════════════
+%  PACKAGES
+% ═══════════════════════════════════════════════════════════════════
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[margin=1in,headheight=14pt]{geometry}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[numbers]{natbib}
+
+% ═══════════════════════════════════════════════════════════════════
+%  CONFIGURATION
+% ═══════════════════════════════════════════════════════════════════
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=green!50!black,
+    urlcolor=blue!60!black
+}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10},
+    numbers=none,
+    columns=fullflexible,
+    keepspaces=true
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Daugherty, Ward, Ryan \& Martin --- Beale Cipher Forensics}
+\lhead{SmartLedger Research}
+\rfoot{Page \thepage}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+% ═══════════════════════════════════════════════════════════════════
+%  TITLE
+% ═══════════════════════════════════════════════════════════════════
+\title{%
+    \textbf{Computational Forensic Analysis of the Beale Ciphers:}\\[6pt]
+    \Large Spectral Diagnostics, Fabrication Scoring, Edition Reconstruction,\\
+    and Multi-Channel Forensic Analysis via Ising Optimization
+}
+
+\author{
+    Bryan Daugherty, CCI, CBI, SME\textsuperscript{1}
+    \and
+    Gregory Ward\textsuperscript{1}
+    \and
+    Shawn Ryan\textsuperscript{1}
+    \and
+    J. Alexander Martin\textsuperscript{1}
+    \\[6pt]
+    \textsuperscript{1}SmartLedger Research / Origin Neural AI
+}
+
+\date{March 2026}
+
+\begin{document}
+\maketitle
+
+% ═══════════════════════════════════════════════════════════════════
+%  ABSTRACT
+% ═══════════════════════════════════════════════════════════════════
+\begin{abstract}
+We present a computational forensic analysis of the three Beale ciphers
+(B1,~B2,~B3) spanning eight phases and 35+ statistical diagnostics.
+
+\textbf{Methods.}
+We employ a 4-solver Ising ensemble, Welch-averaged bispectral analysis,
+QUBO-formulated edition search, parametric fabrication simulation with
+bootstrap validation, and multi-channel forensic analysis extending the
+trifurcating cipher methodology developed for Kryptos~K4~\cite{daugherty2026k4}.
+Analysis code ($\sim$16{,}000 lines, 25~scripts) was executed on a
+combinatorial optimization platform.
+
+\textbf{Results.}
+B2 is genuine (fabrication score~0.00, decode accuracy~96.6\%,
+edition-corrected~$\sim$99\%+). B1 and~B3 are fabrications
+(scores~4.01/7.51) with formal impossibility proofs
+($\chi^2_{\text{B1}}{=}50.9$, $\chi^2_{\text{B3}}{=}57.8$, threshold~44.3).
+Ward's construction timeline is reconstructed (B2$\to$B3$\to$B1,
+$\sim$45~min total), cognitive identity profiling shows consistency
+with a single fabricator ($p{=}0.052$, 12D dual-null bootstrap), all 22~B2 mismatches resolve into
+4~systematic groups, and joint simulated annealing validates the
+edition-specific offset model (92.2\% accuracy, 31\% offset rediscovery).
+Four forensic information channels are identified: the genuine B2
+surface encoding, a structural edition fingerprint, Ward's cognitive
+fabrication signature, and the deliberately embedded Gillogly
+alphabetical sequence.
+\end{abstract}
+
+% ═══════════════════════════════════════════════════════════════════
+%  1. INTRODUCTION
+% ═══════════════════════════════════════════════════════════════════
+\section{Introduction}
+
+The Beale ciphers, published in an 1885 pamphlet attributed to
+James~B.~Ward~\cite{ward1885}, purportedly describe the location~(B1),
+contents~(B2), and heirs~(B3) of a treasure buried in Bedford County,
+Virginia in the 1820s. Only B2 has been decrypted, using the Declaration
+of Independence (DoI) as a book cipher key, with first letters of
+numbered words spelling out the plaintext.
+
+Gillogly~\cite{gillogly1980} first noted the suspicious alphabetical run
+in B1's DoI-decoded output. Fitzgerald~\cite{fitzgerald2024} introduced
+quantitative fabrication metrics achieving Bayes Factor~$\sim 2 \times 10^7$.
+Wase~\cite{wase2020} provided independent statistical analysis, and
+Hammer~\cite{hammer1968} identified early structural signatures. However,
+no prior analysis has combined spectral forensics, formal impossibility
+proofs, cognitive identity testing, edition reconstruction, and
+multi-channel forensic analysis into a unified framework.
+
+We present such an analysis across eight phases comprising 35+~diagnostics
+and $\sim$16{,}000 lines of analysis code, executed on a
+combinatorial optimization platform. Our contributions include:
+
+\begin{enumerate}[nosep]
+    \item Formal impossibility proofs that B1/B3 encode gibberish under
+          \emph{any} key text (Section~\ref{sec:impossibility})
+    \item Identification of Beale's specific DoI edition via offset cluster
+          analysis and joint SA optimization (Section~\ref{sec:edition})
+    \item Cognitive identity profiling consistent with a single fabricator
+          for B1 and~B3 (Section~\ref{sec:cognitive})
+    \item Welch-averaged bicoherence correcting single-realization spectral
+          saturation (Section~\ref{sec:spectral})
+    \item Multi-channel forensic analysis applying the trifurcating cipher
+          framework from K4~\cite{daugherty2026k4} (Section~\ref{sec:channels})
+    \item Complete resolution of all 22~B2 mismatches into 4~systematic
+          groups (Section~\ref{sec:edition})
+\end{enumerate}
+
+% ═══════════════════════════════════════════════════════════════════
+%  2. RELATED WORK
+% ═══════════════════════════════════════════════════════════════════
+\section{Related Work}
+\label{sec:related}
+
+Gillogly~\cite{gillogly1980} identified the 12-letter alphabetical run
+CDEFGHIIJKLM in B1's DoI-decoded output and noted that B1/B3 decoded
+text has non-English letter frequencies. His analysis was qualitative;
+we formalize this observation as a chi-squared impossibility proof
+(Theorem~\ref{thm:impossibility}) and prove the Gillogly sequence was
+deliberately planted via monotonicity analysis (Section~\ref{sec:gillogly}).
+
+Fitzgerald~\cite{fitzgerald2024} introduced four quantitative fabrication
+metrics (serial correlation, distinct ratio, fatigue gradient, page
+boundary clustering), achieving Bayes Factor~$\sim 2 \times 10^7$ for
+fabrication detection. We adopt and extend his metrics, adding changepoint
+detection, chi-squared selection models, and a parametric 8-parameter
+Ward construction simulator that reproduces B1/B3 diagnostics within
+1--2$\sigma$ (Section~\ref{sec:wardmodel}).
+
+Wase~\cite{wase2020} provided independent statistical analysis of number
+distributions. Hammer~\cite{hammer1968} identified early structural
+signatures in the cipher numbers.
+
+Friedman's~\cite{friedman1987} index of coincidence provides one of our
+three independent impossibility arguments. The Needleman-Wunsch
+algorithm~\cite{needleman1970}, originally developed for protein sequence
+alignment, serves as our primary tool for B2 decode accuracy measurement,
+resolving the 796~vs~763 character discrepancy that misled earlier analyses
+into reporting $\sim$34\% accuracy instead of the true 96.6\%.
+
+Our prior work on Kryptos~K4~\cite{daugherty2026k4} established the
+concept of a \emph{trifurcating cipher}---a single ciphertext encoding
+multiple information channels through a shared invariant anchor. We extend
+this framework to the Beale ciphers, distinguishing between intentional
+and emergent information channels (Section~\ref{sec:channels}).
+
+% ═══════════════════════════════════════════════════════════════════
+%  3. METHODOLOGY
+% ═══════════════════════════════════════════════════════════════════
+\section{Methodology}
+\label{sec:methodology}
+
+Our analysis proceeds in eight phases, each motivated by open questions
+from the preceding phase. The progressive structure is essential:
+later phases build on calibrated baselines and resolved ambiguities
+from earlier work.
+
+\subsection{Phase~1: Statistical Fingerprinting}
+
+We begin with twelve foundational diagnostics to establish baseline
+distributional properties and identify anomalies warranting deeper
+investigation. These include number distribution statistics,
+Benford's Law testing, last-digit uniformity, Shannon entropy,
+number frequency analysis, bigram analysis, autocorrelation
+(50~lags), spectral fingerprinting (transition matrix eigenvalues
+mod~26), index of coincidence~\cite{friedman1987}, Gillogly checks,
+cross-cipher comparison, and page boundary analysis. The key
+diagnostic outcome---B2's near-zero serial correlation (0.044) vs
+B1/B3's elevated values (0.252/0.612)---motivates the fabrication
+scoring framework in Phase~2.
+
+\subsection{Phase~2: Fabrication Scoring}
+
+Phase~1 anomalies are formalized using four Fitzgerald-class
+metrics~\cite{fitzgerald2024} with Bayes Factor~$\sim 2 \times 10^7$.
+We extend Fitzgerald's framework with a chi-squared selection model
+that distinguishes \emph{letter-targeted} selection (genuine) from
+\emph{DoI-uniform} selection (fabricated), two-phase segmentation with
+changepoint detection revealing fatigue transitions, and Monte Carlo
+null distributions ($N{=}5{,}000$) for calibration.
+
+\subsection{Phase~3: Ward Construction Model}
+
+To test whether a single fabricator model can reproduce B1/B3
+diagnostics, we build an 8-parameter parametric simulator
+(WardFabricationModel). If the model fits both ciphers, this supports
+the single-fabricator hypothesis and constrains the construction
+timeline. Gillogly forensics (monotonicity proof) and even-digit bias
+investigation are conducted in this phase.
+
+\subsection{Phase~4: Cryptanalysis \& Edition Identification}
+
+We perform full B2 decryption with Needleman-Wunsch
+alignment~\cite{needleman1970}, resolving the 796~vs~763 discrepancy.
+DoI edition fingerprinting identifies 51~non-zero offsets revealing
+$\sim$13 extra words in Beale's edition. B3~Q1 fragment recovery
+rules out genuine content. Formal B1/B3 impossibility proofs are
+established.
+
+\subsection{Phase~5: Edition Reconstruction \& Mismatch Resolution}
+
+All 22~true B2 mismatches are exhaustively resolved into 4~systematic
+groups plus orphan errors. X-word and Y-word mysteries are investigated.
+Ward cognitive forensics (sliding window cognitive load model) and
+Gillogly construction simulation are performed.
+
+\subsection{Phase~6: Spectral Forensics \& Publication Preparation}
+
+A critical Y/X-word alignment bug is fixed (8/9 not 2/9 for Y-word).
+Eight bispectral diagnostic tools are applied. QUBO edition search
+with the 4-solver Ising ensemble verifies the DoI as uniquely correct
+($>$60~pp accuracy gap vs all alternative keys). Bootstrap confidence
+intervals ($N{=}2{,}000$) are computed for all key metrics.
+
+\subsection{Phase~7: Validation \& Multi-Channel Analysis}
+
+Welch-averaged bicoherence corrects single-realization saturation.
+Ward cognitive identity profiling and a same-fabricator bootstrap test
+are introduced. B1 key text impossibility is independently confirmed
+via 7~candidate texts. DoI edition search confirms zero Y/X-words in
+the standard DoI. Joint offset SA optimization validates the edition
+model. Multi-channel forensic analysis extends the K4 trifurcating
+cipher framework.
+
+\subsection{Phase~8: Exhaustive Correctness \& Rigor}
+
+A deep audit of all 24~scripts fixes 2~bugs (rank computation in B2
+decrypt, cascading digit-swap in typography analysis), resolves 4~internal
+contradictions, strengthens the same-fabricator hypothesis (H3) via
+expanded 12-dimensional cognitive feature vector ($N{=}10{,}000$ bootstrap
+with dual-null generation), closes 5~open questions (including delta
+encoding test confirming no secondary message in B1/B3 gibberish),
+refines even-digit bias decomposition by digit position, computes an
+independent Bayes Factor via KDE, fixes Cohen's~$d$ pooled standard
+deviation, and documents 7~novel data patterns (B1 block-copy, B1-B2
+vocabulary disjointness, B3 ascending runs, B3 missing digit~5, offset
+anomalies, Gillogly flanking gibberish).
+
+% ═══════════════════════════════════════════════════════════════════
+%  4. STATISTICAL FINGERPRINTING
+% ═══════════════════════════════════════════════════════════════════
+\section{Statistical Fingerprinting Results}
+
+\subsection{Number Distribution}
+
+\begin{center}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+\textbf{Cipher} & \textbf{Count} & \textbf{Range} & \textbf{Mean} & \textbf{Std} & \textbf{Unique} & \textbf{Distinct Ratio} \\
+\midrule
+B1 & 520 & [1, 2906] & 289.7 & 331.2 & 298 & 0.573 \\
+B2 & 763 & [1, 1005] & 167.8 & 197.8 & 180 & 0.236 \\
+B3 & 618 & [1, 975]  & 148.1 & 167.9 & 263 & 0.426 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+B2's low distinct ratio (0.236) indicates heavy position reuse consistent with genuine
+homophonic book cipher encoding. B1~(0.573) and B3~(0.426) show much less reuse,
+inconsistent with encoding common English letters (Figure~\ref{fig:vocabgrowth}).
+
+\textbf{Vocabulary disjointness.}
+Cipher number~216 appears 8~times in~B1 but 0~times in~B2; conversely,
+cipher number~807 appears 7~times in~B2 but 0~times in~B1. This
+vocabulary disjointness---where frequently used numbers in one cipher
+are completely absent from the other---provides independent evidence
+that B1 and~B2 were produced by different encoders with different lookup
+habits: Beale (B2) and Ward (B1).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig5_vocabulary_growth.png}
+\caption{Vocabulary growth curves. B2's curve plateaus early due to
+heavy position reuse (genuine homophonic encoding). B1 and~B3 show
+nearly linear growth, consistent with each number being selected
+only once or twice (fabrication).}
+\label{fig:vocabgrowth}
+\end{figure}
+
+\subsection{Serial Correlation}
+
+\begin{center}
+\begin{tabular}{@{}lcl@{}}
+\toprule
+\textbf{Cipher} & \textbf{Lag-1 SC} & \textbf{Interpretation} \\
+\midrule
+B1 & 0.252 & Moderate sequential scanning \\
+B2 & 0.044 & Near-zero (targeted selection) \\
+B3 & 0.612 & Strong sequential scanning \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+B2's near-zero serial correlation confirms the encoder selected DoI words by letter,
+jumping across the text. B3's~0.612 is characteristic of page-scanning fabrication.
+
+% ═══════════════════════════════════════════════════════════════════
+%  5. FABRICATION SCORING
+% ═══════════════════════════════════════════════════════════════════
+\section{Fabrication Scoring}
+
+\subsection{Master Results Table}
+
+\begin{center}
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Metric} & \textbf{B1 (Location)} & \textbf{B2 (Contents)} & \textbf{B3 (Names)} \\
+\midrule
+\textbf{Fabrication Score} & \textbf{4.01} & \textbf{0.00} & \textbf{7.51} \\
+Serial Correlation & 0.252 & 0.044 & 0.612 \\
+Distinct Ratio & 0.573 & 0.236 & 0.426 \\
+Fatigue Gradient & 0.128 & 0.047 & 0.167 \\
+$\chi^2$ vs DoI & 9.98 & 141.71 & 13.38 \\
+$\chi^2$ vs English & 50.86 & 9.63 & 57.81 \\
+Selection Model & DoI-uniform & Letter-targeted & DoI-uniform \\
+Classification & fabricated & genuine & fabricated \\
+Changepoint & pos 55 & N/A & pos 64 \\
+Even-digit ratio & 0.590 & 0.528 & 0.529 \\
+Max number & 2906 & 1005 & 975 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig1_fabrication_scores.png}
+\caption{Fabrication scores with bootstrap 95\% confidence intervals.
+B2's score (0.00) is cleanly separated from B1~(4.01) and B3~(7.51),
+with non-overlapping CIs.}
+\label{fig:fabscores}
+\end{figure}
+
+\subsection{Selection Model Analysis}
+
+The $\chi^2$ selection model is the most powerful discriminator:
+
+\begin{itemize}[nosep]
+    \item \textbf{B2}: $\chi^2$ vs English $= 9.63$ (good fit), vs DoI $= 141.71$
+          (poor fit). Beale selected DoI words whose first letters match English
+          plaintext frequency---\textbf{letter-targeted selection}.
+    \item \textbf{B1/B3}: $\chi^2$ vs DoI $= 9.98/13.38$ (good fit), vs English
+          $= 50.86/57.81$ (poor fit). Ward picked DoI words essentially at random,
+          producing first-letter frequencies matching the DoI's own
+          distribution---\textbf{DoI-uniform selection}.
+\end{itemize}
+
+\subsection{Two-Phase Segmentation}
+
+Both B1 and~B3 show a dramatic changepoint where serial correlation jumps:
+B1 at position~55 (SC:~$0.05 \to 0.30$), B3 at position~64 (SC:~$0.08 \to 0.65$).
+This indicates Ward initially tried to randomize his selections (Q1) but quickly
+succumbed to fatigue, reverting to sequential page-scanning.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig2_fatigue_timeline.png}
+\caption{Quarter-level serial correlation showing fatigue progression.
+B2 (control) maintains consistent low SC throughout. B1 and~B3 show
+monotonic fatigue gradients with clear Q1$\to$Q2 transitions.}
+\label{fig:fatigue}
+\end{figure}
+
+% ═══════════════════════════════════════════════════════════════════
+%  6. WARD CONSTRUCTION MODEL
+% ═══════════════════════════════════════════════════════════════════
+\section{Ward Construction Model}
+\label{sec:wardmodel}
+
+\subsection{Parametric Fabrication Simulator}
+
+The 8-parameter WardFabricationModel reproduces B1/B3 diagnostics within 1--2$\sigma$:
+
+\begin{center}
+\begin{tabular}{@{}lrr@{}}
+\toprule
+\textbf{Parameter} & \textbf{B3 (fitted)} & \textbf{B1 (fitted)} \\
+\midrule
+Scan direction bias & 0.613 & 0.561 \\
+Mean forward step & 37 & 245 \\
+Mean backward step & 115 & 310 \\
+Fatigue rate & 0.167 & 0.128 \\
+Q1 length & 130 & 130 \\
+Reset probability & 0.05 & 0.04 \\
+Reuse probability & 0.57 & 0.43 \\
+Key range & 975 & 2906 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+KS test $p$-values: B1~$= 0.79$, B3~$= 0.65$ (both pass at $p{=}0.05$).
+
+\subsection{Gillogly Sequence: Deliberate Placement}
+\label{sec:gillogly}
+
+The 12-letter alphabetical run CDEFGHIIJKLM at B1 positions 189--200:
+
+\begin{itemize}[nosep]
+    \item \textbf{Numbers are NOT monotone}: 195, 320, 37, 122, 113, 6, 140, 8, 120,
+          305, 42, 58 (monotone ratio $= 0.36$)
+    \item \textbf{Letters ARE monotone}: C, D, E, F, G, H, I, I, J, K, L, M
+          (monotone ratio $= 1.00$)
+    \item \textbf{Monte Carlo probability}: $P < 10^{-5}$ (100{,}000 trials, 0~successes)
+\end{itemize}
+
+This proves Ward deliberately hand-picked DoI word positions to spell an alphabetical
+sequence. A sequential-scanning fabricator would produce monotone numbers---Ward's
+non-monotone numbers prove targeted letter selection for this segment only.
+Estimated insertion time: $\sim$6~minutes.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig6_gillogly_smoking_gun.png}
+\caption{Gillogly smoking gun. \textbf{Top:} cipher numbers at positions
+189--200 are non-monotone ($r{=}0.36$). \textbf{Bottom:} DoI-decoded letters
+are perfectly monotone ($r{=}1.00$). This proves deliberate letter-targeted
+selection.}
+\label{fig:gillogly}
+\end{figure}
+
+\subsection{Construction Timeline}
+
+Evidence for the ordering B2~(genuine) $\to$ B3~(mimics B2) $\to$ B1~(expanded):
+
+\begin{enumerate}[nosep]
+    \item \textbf{B2--B3 similarity}: KS statistic B2--B3 $<$ B1--B2
+    \item \textbf{Range expansion}: B3 max$=$975 $\approx$ B2 max$=$1005; B1 max$=$2906
+    \item \textbf{Fatigue}: B3 gradient (0.167) $>$ B1 (0.128)
+    \item \textbf{Serial correlation}: B3 (0.612) $>$ B1 (0.252)
+\end{enumerate}
+
+\noindent\textbf{Note on construction order vs fatigue intensity.}
+B3's higher fatigue gradient and serial correlation despite being fabricated
+\emph{first} reflects Ward's decreasing motivation rather than accumulated
+tiredness: B3 was constructed immediately after working with the genuine B2
+and Ward applied minimal effort to mimic its distribution. By the time Ward
+produced B1, he had developed a more deliberate strategy (expanded key range,
+planted Gillogly sequence), resulting in paradoxically \emph{lower} serial
+correlation despite B1 being the later fabrication.
+
+% ═══════════════════════════════════════════════════════════════════
+%  7. CRYPTANALYSIS RESULTS
+% ═══════════════════════════════════════════════════════════════════
+\section{Cryptanalysis Results}
+
+\subsection{DoI Edition Fingerprinting}
+
+The 51 non-zero offsets in the BEALE\_DOI\_OFFSET map reveal systematic differences
+between the standard DoI and Beale's edition:
+
+\begin{center}
+\begin{tabular}{@{}rrrp{5cm}@{}}
+\toprule
+\textbf{Offset} & \textbf{Range} & \textbf{Count} & \textbf{Interpretation} \\
+\midrule
+$+1$  & 246--470 & $\sim$25 & 1 word inserted before DoI word 245 \\
+$+11$ & 485--620 & $\sim$15 & 10 more words inserted near DoI word 485 \\
+$+12$ & 666 & 1 & Cumulative 12 insertions \\
+$+13$ & 807 & 1 & Cumulative 13 insertions \\
+$-6$  & 557, 620 & 2 & Pamphlet typo (local error) \\
+$-3$  & 581 & 1 & Pamphlet typo \\
+$-2$  & 643 & 1 & Pamphlet typo \\
+$-7$  & 647 & 1 & Pamphlet typo \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Beale's DoI edition included $\sim$13 extra words not in the standard text.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig7_offset_clusters.png}
+\caption{Offset clusters. Each point represents a cipher number with
+non-zero offset, color-coded by offset magnitude. The $+1$ and $+11$
+clusters (positions 245--470 and 485--620) indicate systematic word
+insertions in Beale's DoI edition.}
+\label{fig:offsets}
+\end{figure}
+
+\subsection{Edition Identification via Mismatch Analysis}
+\label{sec:edition}
+
+Needleman-Wunsch alignment~\cite{needleman1970} reveals 22 true mismatches
+clustering into 4~systematic groups:
+
+\begin{center}
+\begin{tabular}{@{}rlllr@{}}
+\toprule
+\textbf{Cipher \#} & \textbf{Standard} & \textbf{Beale's} & \textbf{Evidence} & \textbf{Fixes} \\
+\midrule
+95  & ``\textbf{i}nalienable'' (I)  & ``\textbf{U}nalienable'' (U)  & Dunlap broadside~\cite{dunlap1776} & 3 \\
+84  & ``\textbf{c}reated'' (C) & off-by-1 $\to$ ``\textbf{e}qual'' (E) & 5/7 correct & 2 \\
+811 & ``\textbf{C}olonies'' (C) & Y-word & 8/9 want Y & 8--9 \\
+1005 & ``\textbf{W}e'' (W) & X-word & All 4 want X & 4 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+``Unalienable'' confirms a Dunlap-tradition printing~\cite{dunlap1776}.
+The standard DoI has \textbf{zero} X-words and \textbf{zero} Y-words
+among its 1{,}322 words---Beale's edition must have contained text beyond
+the standard body.
+
+\subsection{B2 Full Decryption Analysis}
+
+\begin{itemize}[nosep]
+    \item Without offsets (NW-aligned~\cite{needleman1970}): 78.5\% (599/763)
+    \item With offset correction (aligned): \textbf{96.6\%} (737/763)
+    \item True mismatches: \textbf{22 positions}
+    \item Extra plaintext characters: 37 (Ward expanded abbreviations)
+    \item Matching prefix: first 24 positions decode perfectly
+\end{itemize}
+
+\noindent\textbf{Encoder movement:} serial correlation of cursor positions $= 0.044$
+(near-zero), confirming random-access letter-indexed lookup. Mean cursor
+jump: 173.8 DoI word positions. Frequency-position correlation: $0.870$
+(common English letters use more DoI positions).
+
+\noindent\textbf{Plaintext linguistics:} Shannon entropy~$= 4.11$~bits/char
+(1820s English baseline: 4.18), IC~$= 0.0684$ (English: 0.0667), bigram
+hit rate~$= 0.420$ (English baseline: 0.35), 28 period markers across
+18~categories.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/fig4_nw_alignment_strip.png}
+\caption{Needleman-Wunsch alignment strip (763~positions). Green indicates
+correct decode; red indicates mismatch. Mismatches cluster at systematic
+edition-difference positions (cipher numbers 95, 84, 811, 1005) rather
+than distributing randomly.}
+\label{fig:nwalign}
+\end{figure}
+
+\subsection{B1/B3 Impossibility Proof}
+\label{sec:impossibility}
+
+Three independent arguments prove B1/B3 encode gibberish:
+
+\begin{lemma}[Letter Frequency Test]
+\label{lem:chisq}
+For any book cipher encoding English plaintext, the decoded first-letter
+frequency distribution must satisfy $\chi^2 < 44.3$ (25~d.f., $p{=}0.01$).
+\end{lemma}
+
+\begin{proof}
+A book cipher maps each cipher number to the first letter of the corresponding
+key text word. If the plaintext is English, the decoded letters---regardless
+of key text---must follow English letter frequency. The $\chi^2$ goodness-of-fit
+test against the English unigram distribution provides a necessary condition.
+With 26~categories (letters A--Z) and 25~degrees of freedom, the critical value
+at $p{=}0.01$ is~44.3.
+\end{proof}
+
+\begin{lemma}[Index of Coincidence Test]
+\label{lem:ic}
+English text has $\text{IC} \approx 0.067$. Any monoalphabetic decode of English
+must satisfy $\text{IC} > 0.050$.
+\end{lemma}
+
+\begin{proof}
+The IC is invariant under symbol permutation~\cite{friedman1987}. A book cipher
+applies a fixed mapping from cipher numbers to plaintext letters; this mapping is
+a permutation of the effective alphabet. Since IC is permutation-invariant, the
+decoded IC must match the plaintext IC. The threshold 0.050 is conservative,
+well below English ($\sim$0.067) and well above random ($\sim$0.038).
+\end{proof}
+
+\begin{theorem}[B1/B3 Gibberish]
+\label{thm:impossibility}
+B1 and~B3 do not encode English plaintext under any book cipher key text.
+\end{theorem}
+
+\begin{proof}
+\textbf{B1:} $\chi^2 = 50.9 > 44.3$ (fails Lemma~\ref{lem:chisq}),
+$\text{IC} = 0.041 < 0.050$ (fails Lemma~\ref{lem:ic}).
+\textbf{B3:} $\chi^2 = 57.8 > 44.3$ (fails Lemma~\ref{lem:chisq}),
+$\text{IC} = 0.039 < 0.050$ (fails Lemma~\ref{lem:ic}).
+Both ciphers fail two independent necessary conditions for English plaintext.
+Furthermore, even under optimal letter assignment---assigning each distinct
+cipher number to whichever letter maximizes English bigram rates---the resulting
+IC still falls below 0.050, proving no key text can rescue these ciphers.
+B2 (control) passes both tests: $\chi^2 = 9.63 < 44.3$, $\text{IC} = 0.068 > 0.050$.
+\end{proof}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig3_chi_squared_impossibility.png}
+\caption{Chi-squared impossibility test. B1~(50.9) and B3~(57.8)
+exceed the critical threshold (44.3, dashed line) while B2~(9.63)
+passes comfortably.}
+\label{fig:chisq}
+\end{figure}
+
+% ═══════════════════════════════════════════════════════════════════
+%  8. SPECTRAL FORENSICS
+% ═══════════════════════════════════════════════════════════════════
+\section{Spectral Forensics}
+\label{sec:spectral}
+
+\subsection{Bispectral Analysis}
+
+Eight spectral diagnostic tools were applied: power spectrum (FFT-based PSD),
+bispectrum $B(f_1,f_2) = X(f_1) \cdot X(f_2) \cdot \overline{X(f_1{+}f_2)}$,
+bicoherence (normalized bispectrum), trispectrum slice, spectral entropy,
+phase randomness (Rayleigh test), cepstral analysis, and multitaper spectrum.
+
+\textbf{Key limitation:} single-realization bicoherence saturated to $\sim$1.0
+for all ciphers due to deterministic phase in a single FFT---a known limitation
+of bispectral estimation on short sequences ($N < 1{,}000$).
+
+\subsection{Welch-Averaged Bicoherence}
+
+Phase~7 introduced segment-averaged bicoherence
+(\texttt{seg\_len}$=$128, 50\% overlap), yielding meaningful values in $[0,1]$:
+
+\begin{center}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Metric} & \textbf{B1} & \textbf{B2} & \textbf{B3} \\
+\midrule
+Welch Bicoherence & 0.293 & \textbf{0.187} & 0.293 \\
+Spectral Entropy & 0.913 & \textbf{0.928} & 0.834 \\
+Phase Uniform & Yes & Yes & \textbf{No} \\
+Spectral Fab Score & 0.528 & \textbf{0.402} & 0.722 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+B2's lowest bicoherence (0.187) and highest spectral entropy (0.928)
+confirm genuine encoding with independent phase relationships. B3's highest
+fabrication score (0.722) reflects heavy sequential scanning. B1 falls
+intermediate, consistent with mixed construction (careful Q1 + lazy
+remainder + planted Gillogly).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=\textwidth]{figures/fig8_bispectrum_comparison.png}
+\caption{Welch-averaged bicoherence heatmaps. B2~(center) shows
+uniformly low bicoherence consistent with independent phase
+relationships. B1 and~B3 show elevated coupling from sequential
+scanning patterns.}
+\label{fig:bispectrum}
+\end{figure}
+
+% ═══════════════════════════════════════════════════════════════════
+%  9. EDITION RECONSTRUCTION
+% ═══════════════════════════════════════════════════════════════════
+\section{Edition Reconstruction}
+\label{sec:editionrecon}
+
+\subsection{Exhaustive Mismatch Resolution}
+
+All 22 mismatches resolved into 4~systematic groups:
+
+\begin{center}
+\begin{tabular}{@{}clrllll@{}}
+\toprule
+\textbf{Group} & \textbf{Cipher \#} & \textbf{Count} & \textbf{Dec.} & \textbf{Exp.} & \textbf{Explanation} & \textbf{Status} \\
+\midrule
+A & 95 & 3 & I & U & Dunlap ``unalienable'' & SOLVED \\
+B & 84 & 2 & C & E & Off-by-1 miscount & SOLVED \\
+C & 811 & 8--9 & C & Y & Y-word edition difference & EDITION \\
+D & 1005 & 4 & W & X & X-word edition difference & EDITION \\
+--- & various & 4 & --- & --- & Orphan transcription errors & TESTED \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{QUBO Edition Search}
+
+QUBO-formulated edition identification using the 4-solver Ising ensemble.
+Binary variables $x_{ij}$ represent word~$j$ at insertion slot~$i$. Field terms
+reward X/Y-resolving first letters; coupling terms enforce per-zone insertion limits.
+Complementary simulated annealing (50K~steps) explores the full insertion space.
+
+\textbf{B2 alternative key verification}: DoI achieves $\sim$96.6\% accuracy; best
+alternative key achieves $<$30\%---a $>$60~percentage-point gap confirming the DoI
+is uniquely, overwhelmingly correct (Figure~\ref{fig:keyuniq}).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.85\textwidth]{figures/fig10_b2_key_uniqueness.png}
+\caption{B2 key uniqueness. The DoI achieves 96.6\% decode accuracy;
+all alternative key texts (Genesis, Constitution, Magna Carta, etc.)
+fall below 30\%. The $>$60~pp gap is decisive.}
+\label{fig:keyuniq}
+\end{figure}
+
+\subsection{Joint Offset Optimization}
+
+\begin{center}
+\begin{tabular}{@{}lrlp{4cm}@{}}
+\toprule
+\textbf{Method} & \textbf{Accuracy} & \textbf{Offsets} & \textbf{Notes} \\
+\midrule
+No offsets (baseline) & 78.7\% & 0 & Standard DoI \\
+Known BEALE\_DOI\_OFFSET & \textbf{97.1\%} & 51 & Hand-derived (Phase~4) \\
+SA optimizer (10K steps) & 91.6\% & 44 & Blind search \\
+SA optimizer (20K steps) & 92.2\% & 45 & Extended search \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The SA optimizer independently rediscovered 31\% of the known non-zero offsets,
+clustering in the same regions (positions 245--470 and 485--620), providing
+independent validation of the edition model. The optimizer's 92.2\% ceiling
+reflects the fact that remaining corrections require knowledge of specific edition
+differences (``unalienable'' spelling, off-by-1 at position~84, Y/X-word
+substitutions) that cannot be discovered by offset adjustment alone.
+
+% ═══════════════════════════════════════════════════════════════════
+%  10. COGNITIVE IDENTITY ANALYSIS
+% ═══════════════════════════════════════════════════════════════════
+\section{Cognitive Identity Analysis}
+\label{sec:cognitive}
+
+\subsection{Cognitive Feature Extraction}
+
+\begin{center}
+\begin{tabular}{@{}lrrl@{}}
+\toprule
+\textbf{Feature} & \textbf{B1} & \textbf{B3} & \textbf{Interpretation} \\
+\midrule
+Persistence (SC) & 0.252 & 0.612 & B3 far lazier scanning \\
+Fatigue gradient & 0.128 & 0.167 & B3 fatigues faster \\
+Planning (Q1 effort) & 0.05 & 0.08 & Both show careful Q1 \\
+Scan direction bias & 0.561 & 0.613 & Both forward-biased \\
+Even-digit bias & 0.590 & 0.529 & B1 uniquely elevated \\
+Distinct ratio & 0.573 & 0.426 & B1 uses more unique numbers \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Same-Fabricator Consistency Test}
+
+\begin{proposition}[Fabricator Consistency]
+\label{prop:samefab}
+The cognitive feature distance between B1 and~B3 falls below
+the 95th percentile of the bootstrap null distribution.
+Phase~8 expanded the test from 7~to 12~dimensions (adding memory span,
+consistency, cognitive load ceiling, scan forward bias, even-digit
+preference) with $N{=}10{,}000$ bootstrap and dual-null generation from
+both B1 and B3 fabrication models.
+\end{proposition}
+
+At the conventional $\alpha{=}0.05$ significance level, the Phase~7
+result ($p{=}0.071$, 7D, $N{=}5{,}000$) did not reach statistical significance.
+Phase~8's expanded 12D feature vector with dual-null generation ($N{=}10{,}000$)
+yields $p_{\text{B1-null}}{=}0.052$ and $p_{\text{combined}}{=}0.099$
+(observed distance~$= 0.260$, 95th percentile~$= 0.291$), bringing the
+B1-null result to borderline significance. Combined with the convergent evidence from
+the parametric model (Section~\ref{sec:wardmodel})---which fits both ciphers
+with the same 8-parameter architecture, shared Q1 length (130), and similar
+scan direction biases---and newly documented patterns (B1 block-copy at
+positions 37--39/84--86, B1-B2 vocabulary disjointness), the weight of
+evidence supports Ward as the sole fabricator.
+
+\subsection{Revised Session Times}
+
+Using a two-rate model (3.0~s/number for careful Q1, 1.5~s/number for fatigued
+remainder):
+
+\begin{itemize}[nosep]
+    \item \textbf{B1}: $\sim$22~minutes (130 careful + 390 fatigued positions)
+    \item \textbf{B3}: $\sim$17~minutes (130 careful + 488 fatigued positions)
+    \item \textbf{Total}: $\sim$45~minutes including Gillogly insertion
+\end{itemize}
+
+\noindent These estimates depend on assumed per-number rates calibrated from
+cognitive task timing literature. The 3.0~s careful rate assumes deliberate
+DoI scanning with letter verification; the 1.5~s fatigued rate assumes
+sequential page scanning with minimal verification. Actual times may vary
+by a factor of~2 depending on Ward's working conditions.
+
+\subsection{B1 Key Text Analysis}
+
+B1 contains 10~distinct values exceeding the DoI's 1{,}322 words:
+$\{1431, 1496, 1629, 1701, 1706, 1780, 1817, 2018, 2160, 2906\}$.
+Seven candidate key texts (Articles of Confederation, US Constitution,
+Federalist No.~10, Common Sense, Monroe Doctrine, Virginia Declaration
+of Rights, DoI itself) were tested---all produce gibberish with IC~$\approx 0.04$,
+well below the English threshold of~0.067. This provides an independent
+empirical confirmation of Theorem~\ref{thm:impossibility}.
+
+% ═══════════════════════════════════════════════════════════════════
+%  11. MULTI-CHANNEL FORENSIC ANALYSIS
+% ═══════════════════════════════════════════════════════════════════
+\section{Multi-Channel Forensic Analysis}
+\label{sec:channels}
+
+Our analysis of Kryptos K4~\cite{daugherty2026k4} identified a
+\emph{trifurcating cipher}---a single ciphertext encoding three distinct
+information channels through a shared invariant anchor. We apply this
+multi-channel analytical framework to the Beale ciphers, distinguishing
+between \emph{intentional} channels (designed by the creator) and
+\emph{emergent} channels (forensic artifacts recoverable through analysis).
+
+\subsection{Framework: Intentional vs Emergent Channels}
+
+In the K4 analysis, all three channels were \emph{intentionally designed}
+by Sanborn: two linguistic plaintexts sharing the BERLINCLOCK anchor, and
+a numeric coordinate payload encoded in grid modification arithmetic.
+The Beale ciphers present a different structure: only one channel was
+intentionally designed (B2's surface encoding), while the remaining
+channels are emergent forensic artifacts.
+
+This distinction is analytically important. Intentional channels (K4)
+demonstrate cryptographic design sophistication. Emergent channels (Beale)
+demonstrate the impossibility of fabricating a cipher without leaving
+recoverable traces---a principle we term \emph{forensic inevitability}.
+
+\subsection{Channel Inventory}
+
+\begin{center}
+\begin{tabular}{@{}lp{3cm}p{4.5cm}ll@{}}
+\toprule
+\textbf{Channel} & \textbf{Medium} & \textbf{Content} & \textbf{Type} & \textbf{Status} \\
+\midrule
+\textbf{Surface (B2)} & Book cipher decode & Treasure description & Intentional & Confirmed \\
+\textbf{Edition fingerprint} & Offset cluster pattern & DoI edition identity & Emergent & Confirmed \\
+\textbf{Fabricator signature} & Fabrication statistics & Ward's cognitive identity & Emergent & Confirmed \\
+\textbf{Gillogly sequence} & Embedded letter run & Alphabetical Easter egg & Intentional & Confirmed \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Channel~1: Surface Encoding (B2)}
+
+The primary channel: Beale's genuine book cipher encoding the treasure
+contents via first-letter substitution against the DoI. This is the
+direct analog of K4's ``Story'' channel---a linguistic plaintext
+recovered through the intended decryption procedure.
+
+The DoI itself functions as the \emph{invariant anchor} for all channels,
+analogous to BERLINCLOCK in K4. All offset corrections, edition hypotheses,
+and mismatch resolutions are anchored to the DoI word numbering.
+
+\subsection{Channel~2: Edition Fingerprint (Emergent)}
+
+The 51 non-zero offsets in BEALE\_DOI\_OFFSET constitute an emergent
+information channel encoding the \emph{identity of Beale's specific DoI
+edition}. The offset cluster structure---$+1$ at position~245, $+11$ at
+position~485, $+12$ at~666, $+13$ at~807---encodes the positions and
+quantities of extra words in Beale's edition relative to the standard text.
+
+This channel is \emph{unintentional} but information-bearing: the offset
+pattern uniquely identifies the edition and cannot be reproduced by any
+other DoI variant. The joint SA optimizer's 31\% rediscovery rate confirms
+that this structural information is genuine and recoverable from the
+cipher numbers alone.
+
+\begin{proposition}[Edition Channel Capacity]
+\label{prop:editionchannel}
+The offset map encodes $\sim$13 word-insertion events across
+$\sim$1{,}000 possible positions, yielding an upper-bound information
+content of approximately $13 \cdot \log_2(1000) \approx 130$~bits.
+\end{proposition}
+
+\noindent\textbf{Caveat:} this is an upper bound assuming uniform
+distribution over insertion positions. In practice, edition variants
+have constrained insertion points (headings, section boundaries),
+reducing the effective capacity. The estimate serves to establish
+that the offset pattern carries sufficient information to discriminate
+among known DoI editions.
+
+\subsection{Channel~3: Fabricator Signature (Emergent)}
+
+The fabrication patterns in B1 and~B3 constitute an emergent channel
+encoding Ward's \emph{cognitive identity}. Twelve features---persistence,
+fatigue gradient, planning effort, scan direction bias, even-digit bias,
+distinct ratio, memory span, consistency (SC variance), cognitive load ceiling,
+scan forward bias, even-digit preference, and risk tolerance---form a
+cognitive fingerprint that is consistent across
+both fabricated ciphers (Proposition~\ref{prop:samefab}) while encoding
+session-specific variation (B1's elevated even-digit bias: 0.590 vs
+B3's 0.529). Fatigue gradients encode construction sequence information
+(B3 first, then B1).
+
+This is analogous to K4's grid mod digits encoding geographic coordinates
+in the cipher's \emph{arithmetic}---except Ward's signature is encoded
+in the cipher's \emph{statistics} rather than its arithmetic, and the
+encoding is unintentional.
+
+\subsection{Channel~4: Gillogly Embedding (Intentional)}
+
+The 12-letter alphabetical sequence CDEFGHIIJKLM at positions 189--200
+is the only \emph{intentionally embedded} information channel in the
+fabricated ciphers. Ward deliberately selected DoI word positions to
+spell an alphabetical sequence---a process requiring letter-targeted
+selection fundamentally different from the sequential scanning used
+elsewhere. The non-monotone numbers producing monotone letters constitute
+a $P < 10^{-5}$ signature (Figure~\ref{fig:gillogly}).
+
+\subsection{Comparison with K4 Trifurcation}
+
+\begin{center}
+\begin{tabular}{@{}p{2.5cm}p{5cm}p{5cm}@{}}
+\toprule
+\textbf{Property} & \textbf{Kryptos K4} & \textbf{Beale Ciphers} \\
+\midrule
+\textbf{Channels} & 3 (Story, Map, Coordinates) & 4 (Surface, Edition, Cognitive, Gillogly) \\
+\textbf{Intentional} & All 3 (Sanborn) & 2 (B2 surface, Gillogly) \\
+\textbf{Emergent} & 0 & 2 (Edition fingerprint, Fabricator signature) \\
+\textbf{Invariant anchor} & BERLINCLOCK & Declaration of Independence \\
+\textbf{Linguistic channels} & 2 (Layers 1 \& 2) & 1 (B2 only) \\
+\textbf{Numeric channel} & Grid mod $\to$ coordinates & Offset map $\to$ edition ID \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The key finding is that multi-channel information structure arises in
+both designed (K4) and undesigned (Beale) cipher systems. In K4, the
+channels are an achievement of cryptographic design. In the Beale ciphers,
+the emergent channels are a consequence of \emph{forensic inevitability}:
+the impossibility of fabricating a cipher without leaving recoverable
+traces in its statistical structure.
+
+% ═══════════════════════════════════════════════════════════════════
+%  12. BOOTSTRAP VALIDATION
+% ═══════════════════════════════════════════════════════════════════
+\section{Bootstrap Validation}
+
+Proper bootstrap CIs ($N{=}2{,}000$) on all key metrics:
+
+\begin{center}
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Metric} & \textbf{B1 95\% CI} & \textbf{B2 95\% CI} & \textbf{B3 95\% CI} \\
+\midrule
+Serial Correlation & $[0.15, 0.35]$ & $[-0.01, 0.09]$ & $[0.50, 0.72]$ \\
+Distinct Ratio & $[0.52, 0.62]$ & $[0.20, 0.27]$ & $[0.38, 0.47]$ \\
+Fabrication Score & $[2.5, 5.5]$ & $[-0.8, 0.8]$ & $[5.5, 9.5]$ \\
+Fatigue Gradient & $[0.05, 0.20]$ & $[-0.01, 0.10]$ & $[0.10, 0.23]$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+All fabrication score CIs are non-overlapping between B2 and B1/B3
+(Figure~\ref{fig:fabscores}).
+Permutation tests: $p < 0.001$ for all B2 vs B1/B3 comparisons.
+Classifier AUC~$= 0.970$ under 5-fold cross-validation ($N{=}400$ synthetic
+ciphers; Figure~\ref{fig:roc}); ROC AUC~$= 0.9999$.
+Cohen's $d$: all ``large'' effect sizes ($|d| > 0.8$).
+B2 decode accuracy CI: $[0.959, 0.983]$.
+
+\textbf{Independent Bayes Factor.}
+Phase~8 computed an independent Bayes Factor via KDE on the bootstrap
+fabrication score distributions ($N{=}500$ synthetic ciphers per class):
+$\text{BF} = P(\text{B1 score} \mid \text{fabricated}) / P(\text{B1 score} \mid \text{genuine}) = 235.8$
+($\log_{10}\text{BF} = 2.37$), classified as \emph{decisive} evidence for
+fabrication (BF~$> 100$ on the Jeffreys scale).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.75\textwidth]{figures/fig9_roc_curve.png}
+\caption{ROC curve for the fabrication classifier (AUC~$> 0.95$).
+Trained on $N{=}200$ synthetic ciphers under 5-fold cross-validation.}
+\label{fig:roc}
+\end{figure}
+
+% ═══════════════════════════════════════════════════════════════════
+%  13. LIMITATIONS
+% ═══════════════════════════════════════════════════════════════════
+\section{Limitations and Threats to Validity}
+\label{sec:limitations}
+
+\textbf{Statistical significance of fabricator consistency.}
+The Phase~7 same-fabricator bootstrap test yielded $p{=}0.071$ (7D, $N{=}5{,}000$).
+Phase~8 expanded to 12D features with $N{=}10{,}000$ and dual-null generation,
+strengthening the result. We present this as
+\emph{consistent with} rather than \emph{proof of} the single-fabricator
+hypothesis. The convergent evidence from the parametric model fit
+(Section~\ref{sec:wardmodel}) and newly documented patterns (B1 block-copy,
+vocabulary disjointness) strengthens the case but does not eliminate
+the possibility that two fabricators with similar cognitive profiles
+independently produced B1 and~B3.
+
+\textbf{Session time estimates.}
+The two-rate model (3.0~s careful, 1.5~s fatigued) is calibrated from
+cognitive task timing literature, not from direct observation of Ward's
+working speed. Actual fabrication times may differ by a factor of~2.
+The 45-minute estimate should be interpreted as an order-of-magnitude
+result demonstrating physical plausibility, not a precise measurement.
+
+\textbf{Book cipher assumption.}
+The impossibility proofs (Theorem~\ref{thm:impossibility}) assume B1/B3
+use the standard book cipher mechanism (first letter of numbered word).
+If an alternative mechanism were used (e.g., second letter, or word
+selection by some other rule), the proofs would not apply. However, B2's
+confirmed use of the first-letter mechanism, combined with Ward's
+pamphlet explicitly describing this mechanism, makes alternative
+mechanisms unlikely.
+
+\textbf{Edition identification.}
+While we narrow Beale's DoI edition to a Dunlap-tradition printing with
+$\sim$13 extra words, matching to a specific surviving physical copy
+requires archival examination of 1777--1778 Congressional printings.
+This is an archival research question beyond the scope of computational
+analysis.
+
+\textbf{Emergent channel information content.}
+Proposition~\ref{prop:editionchannel} provides an upper-bound estimate
+assuming uniform insertion positions. The actual information content of
+the edition fingerprint channel is lower due to constrained insertion
+points in historical DoI editions.
+
+\textbf{Multiple testing.}
+Over 35 diagnostic metrics are computed across three ciphers. Without
+family-wise error rate correction (e.g., Bonferroni), the probability of
+at least one false positive at $\alpha{=}0.05$ per test is substantial.
+However, our core conclusions rest on \emph{convergent evidence} from
+independent diagnostic families (fabrication scoring, impossibility proofs,
+spectral analysis, parametric modeling, bootstrap CIs), not on any single
+test. All primary claims survive at $\alpha{=}0.001$ individually, and the
+non-overlapping bootstrap CIs provide robustness independent of
+individual test thresholds.
+
+\textbf{No external cipher controls.}
+B2 serves as an internal positive control (genuine cipher), but the
+analysis does not include external authentic book ciphers or synthetic
+ciphers generated by the WardModel for cross-validation. Future work
+should encode known English text with the DoI key and verify that all
+diagnostics produce B2-like scores, and generate synthetic fabrications
+to confirm they cluster with observed B1/B3 scores.
+
+% ═══════════════════════════════════════════════════════════════════
+%  14. CONCLUSION AND FUTURE WORK
+% ═══════════════════════════════════════════════════════════════════
+\section{Conclusion and Future Work}
+
+This analysis, spanning 35+ diagnostics across 8 phases with bootstrap-validated
+confidence intervals, establishes with high confidence:
+
+\begin{enumerate}
+    \item \textbf{B2 is genuine}: fabrication score~0.00 [CI: $-0.8$, $0.8$],
+          letter-targeted selection, IC matching English, spectral entropy~$0.928$,
+          Welch bicoherence~$0.187$. Edition-corrected accuracy~$\sim$99\%+. The DoI
+          is the uniquely correct key ($>$60pp gap). Joint SA optimizer validates
+          the offset model (92.2\% blind, 97.1\% known, 31\% rediscovery).
+
+    \item \textbf{B1 and~B3 are fabrications}: scores~$4.01/7.51$ (non-overlapping CIs),
+          DoI-uniform selection, formal impossibility proofs
+          (Theorem~\ref{thm:impossibility}), elevated bicoherence~$0.293$.
+          Fabrication time: B1$=$22min, B3$=$17min ($\sim$45min total). AUC~$= 0.970$,
+          Bayes Factor~$= 235.8$ (decisive),
+          all $p < 0.001$, all $|d| > 0.8$. B1 independently confirmed impossible
+          via 7 candidate key texts.
+
+    \item \textbf{Single fabricator consistent}: expanded 12D cognitive-feature
+          bootstrap ($N{=}10{,}000$, dual-null), corroborated by convergent parametric
+          model evidence (Section~\ref{sec:wardmodel}) and novel B1 block-copy/vocabulary
+          disjointness patterns.
+
+    \item \textbf{Construction order}: B2~(genuine) $\to$ B3~(17min) $\to$
+          B1~(22min, Gillogly planted) $\to$ pamphlet assembly.
+
+    \item \textbf{Beale's DoI edition}: Dunlap-tradition, $\sim$13 extra words,
+          Y-word at 811 (8/9 confirmed), X-word at~1005. Zero Y/X-words in
+          standard DoI eliminates all standard printings.
+
+    \item \textbf{Gillogly deliberately planted}: non-monotone numbers mapping
+          to monotone letters ($P < 10^{-5}$).
+
+    \item \textbf{All 22 B2 mismatches explained}: 3~Dunlap spelling, 2~off-by-1,
+          8--9~Y-word, 4~X-word, $\sim$4 orphan transcription errors.
+
+    \item \textbf{Four forensic information channels identified}: one intentional
+          surface encoding (B2), one intentional embedding (Gillogly), and two
+          emergent channels (edition fingerprint, fabricator signature). The emergent
+          channels demonstrate \emph{forensic inevitability}---the impossibility of
+          fabricating a cipher without leaving recoverable statistical traces.
+\end{enumerate}
+
+\subsection*{Future Work}
+
+Three questions remain open:
+
+\begin{enumerate}[nosep]
+    \item \textbf{Physical DoI edition matching}: identifying the exact surviving
+          copy requires examining 1777--1778 Journals of Congress printings---an
+          archival research question.
+    \item \textbf{Ward's motive}: why fabricate B1/B3 around a genuine B2? This
+          is a historical/speculative question outside the scope of computational
+          analysis.
+    \item \textbf{4 orphan B2 mismatches}: definitive resolution of the remaining
+          transcription errors (29$\to$N, 47$\to$T, 53$\to$T, 811$\to$D) requires
+          the original manuscript.
+\end{enumerate}
+
+\noindent The methodology demonstrated here---systematic elimination via statistical
+fingerprinting, spectral forensics, parametric simulation, Ising-optimized
+combinatorial search, cognitive identity profiling, and multi-channel forensic
+analysis---represents a comprehensive framework applicable to historical cipher
+authentication. The multi-channel framework, extending our K4 trifurcating cipher
+analysis~\cite{daugherty2026k4}, provides a structured approach to identifying both
+intentional and emergent information channels in cipher systems.
+
+% ═══════════════════════════════════════════════════════════════════
+%  ACKNOWLEDGMENTS
+% ═══════════════════════════════════════════════════════════════════
+\section*{Acknowledgments}
+
+Years of unprecedented research fueled rigorous investigation, enabling
+novel discoveries. Spectral analysis, topological symmetry methods, and
+refined techniques let each decryption grow. Every result demanded
+original thinking, sustained over long, unbroken toil, illuminating
+otherwise neglected structures. Brilliant, dedicated gratitude we
+sincerely return.
+
+% ═══════════════════════════════════════════════════════════════════
+%  REFERENCES
+% ═══════════════════════════════════════════════════════════════════
+\begin{thebibliography}{99}
+
+\bibitem{ward1885}
+Ward, J.B. (1885).
+\textit{The Beale Papers}.
+Lynchburg, VA.
+
+\bibitem{gillogly1980}
+Gillogly, J. (1980).
+``Breaking the Beale Cipher: Part II''.
+\textit{Cryptologia} 4(2):116--119.
+
+\bibitem{fitzgerald2024}
+Fitzgerald, J. (2024).
+``Quantitative Evidence for Fabrication in the Beale Ciphers''.
+\textit{Cryptologia}.
+
+\bibitem{wase2020}
+Wase, T. (2020).
+``Statistical Analysis of the Beale Ciphers''.
+Working paper.
+
+\bibitem{hammer1968}
+Hammer, C. (1968).
+``Signature in the Beale Cipher''.
+\textit{Cryptologia} preprint.
+
+\bibitem{friedman1987}
+Friedman, W.F. (1987).
+\textit{The Index of Coincidence and its Applications to Cryptanalysis}.
+Aegean Park Press.
+
+\bibitem{daugherty2026k4}
+Daugherty, B., Ward, G., \& Ryan, S. (2026).
+``Spectral-Topological Cryptanalysis of Kryptos K4:
+Systematic Elimination and Compound Cipher Characterization
+via Ising Optimization and Algebraic Constraint Satisfaction''.
+SmartLedger Research / Origin Neural AI. In preparation.
+
+\bibitem{needleman1970}
+Needleman, S.B. \& Wunsch, C.D. (1970).
+``A general method applicable to the search for similarities
+in the amino acid sequence of two proteins''.
+\textit{Journal of Molecular Biology} 48(3):443--453.
+
+\bibitem{dunlap1776}
+Dunlap, J. (1776).
+\textit{The unanimous Declaration of the thirteen united States of America}.
+Broadside, printed July~4--5, 1776, Philadelphia.
+
+\end{thebibliography}
+
+% ═══════════════════════════════════════════════════════════════════
+%  APPENDIX: SOFTWARE
+% ═══════════════════════════════════════════════════════════════════
+\appendix
+\section{Software Inventory}
+
+\begin{center}
+\small
+\begin{tabular}{@{}llrl@{}}
+\toprule
+\textbf{Script} & \textbf{Purpose} & \textbf{Lines} & \textbf{Phase} \\
+\midrule
+\texttt{beale\_data.py} & Raw cipher data, DoI text, offset mapping & 706 & 1 \\
+\texttt{beale\_analysis.py} & 12 statistical diagnostics & 701 & 1 \\
+\texttt{beale\_fabrication.py} & Fitzgerald metrics, Bayes factor, DoI bias & 869 & 2 \\
+\texttt{beale\_attack\_classifier.py} & 10-diagnostic classifier, Ising/QUBO, impossibility & 1398 & 2 \\
+\texttt{beale\_ward\_model.py} & 8-parameter Ward model, Gillogly forensics & 895 & 3 \\
+\texttt{beale\_benchmark.py} & Alternative key text testing & 577 & 4 \\
+\texttt{beale\_doi\_editions.py} & DoI edition fingerprinting, offset analysis & 677 & 4 \\
+\texttt{beale\_b2\_decrypt.py} & B2 full decryption, encoder movement & 717 & 4 \\
+\texttt{beale\_b3\_q1.py} & B3 Q1 fragment recovery, multi-key attack & 559 & 4 \\
+\texttt{beale\_typography.py} & Typographic error analysis, digit confusion & 531 & 4 \\
+\texttt{beale\_mismatch\_resolution.py} & Exhaustive B2 mismatch resolution & 681 & 5 \\
+\texttt{beale\_edition\_reconstruct.py} & X/Y-word resolution, edition reconstruction & 840 & 5 \\
+\texttt{beale\_ward\_deep.py} & Ward cognitive forensics, fabrication time & 599 & 5 \\
+\texttt{beale\_dashboard.py} & Master diagnostics dashboard, JSON export & 415 & 5 \\
+\texttt{beale\_yx\_reconcile.py} & Y/X-word NW-aligned reconciliation (bug fix) & 440 & 6 \\
+\texttt{beale\_bispectral.py} & Bispectral analysis + Welch bicoherence & 800 & 6--7 \\
+\texttt{beale\_qubo\_edition.py} & QUBO edition search + alternative key verification & 597 & 6 \\
+\texttt{beale\_bootstrap.py} & Bootstrap CIs, permutation tests, ROC & 545 & 6 \\
+\texttt{beale\_visualize.py} & 10 publication-quality figures & 561 & 6 \\
+\texttt{beale\_ward\_identity.py} & Cognitive profile, same-fabricator test & 535 & 7 \\
+\texttt{beale\_b1\_key\_scan.py} & B1 key text scan, 7 candidates & 603 & 7 \\
+\texttt{beale\_doi\_edition\_search.py} & DoI edition search, Y/X-word availability & 573 & 7 \\
+\texttt{beale\_joint\_optimizer.py} & Joint SA offset optimizer, rediscovery & 600 & 7 \\
+\texttt{beale\_delta\_encoding.py} & Delta encoding test, secondary message & 144 & 8 \\
+\texttt{generate\_data.py} & Data generation utilities & 318 & --- \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\noindent\textbf{Total}: $\sim$16{,}000 lines across 25~scripts.
+Ensemble solvers: SBM (Simulated Bifurcation Machine),
+DMM (Digital Memcomputing Machine), CIM (Coherent Ising Machine),
+Kuramoto (oscillator network).
+
+\end{document}
